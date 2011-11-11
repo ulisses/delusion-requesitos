@@ -1,98 +1,85 @@
 \chapter{Informação do Projecto}
 \section{Motivação do Projecto}
 \subsection{Contexto}
-Nos dias que correm, é fundamental para as seguradoras a disponibilização de simuladores de seguro aos seus clientes, o que constitui um excelente modo de publicitar as suas inovações no desenho da fórmula de cálculo do prémio.
-A inexistência no mercado de um simulador que agregue múltiplos seguros constituiu uma oportunidade para o desenvolvimento deste projecto, com grande potencial de interesse por parte das seguradoras, visto oferecer-lhes a vantagem de publicitar os seus descontos multi-seguro.
+Este projecto dirige-se a todas as empresas de tamanho médio que teêm serviços na internet e na sua rede interna e que
+tenham interesse em defender a sua rede informática interna onde os seus serviços habitam.
+Portanto o produto que vai nascer deste projecto destina-se à area de Segurança de redes informáticas.\\
+O produto final terá a forma de um appliance a ser instalado na rede destino a assegurar.
+
+%Nos dias que correm, é fundamental para as seguradoras a disponibilização de simuladores de seguro aos seus clientes, o que constitui um excelente
+%modo de publicitar as suas inovações no desenho da fórmula de cálculo do prémio.
+%A inexistência no mercado de um simulador que agregue múltiplos seguros constituiu uma oportunidade para o desenvolvimento deste projecto,
+%com grande potencial de interesse por parte das seguradoras, visto oferecer-lhes a vantagem de publicitar os seus descontos multi-seguro.
+
 \subsection{Objectivo do Projecto}
-O objectivo do projecto é informatizar um sistema na área de seguros, isto é, desde a simulação à contratação e configuração dos seguros. Com esta informatização pretende-se que os utilizadores do sistema consigam realizar o processo com mais facilidade. Também será desenvolvido um simulador multi-produto que junte às simulações unitárias toda a área de atribuição de descontos justificada pela multiplicidade de seguros.
+Esta ideia tem como principal objectivo criar um produto sob a forma de appliance
+que habita numa zona da rede interna, preferencialmente mais próximo da ligação à internet.\\
+O produto terá como objectivo colectar a informação de rede e também de uma máquina simulada especifica, onde serão instalados serviços com falhas conhecidas.
+Esta máquina é um honeypot, com um sistema operativo real e serviços reais com falhas reais, com a particularidade de estar a ser inspeccionada
+pela appliance e consequentemente gravar toda a actividade que um atacante faça dentro dela.\\
+Iremos ainda criar uma outra máquina com a capacidade de inspeccionar todo o tráfego malicioso que atravessa a rede da empresa e com isto informar o
+adminsitrador de rede sobre o uso indevido que a rede sofre. Estes inspectores estarão espalhados pelos vários segmentos da rede interna afim de 
+oferecerem uma maior cobertura de análise ao nível da actividade de rede.\\
+Assim, quando um atacante entrar na rede iremos conseguir gravar e mostrar de forma clara a informação sobre o ataque que a empresa sofreu desde a actividade
+que aconteceu na rede até ao que o atacante fez dentro da máquina honeypot.\\
+
+Quando se fala em máquinas, falamos essencialmente de máquinas virtualizadas numa máquina física - appliance de rede,
+uma vez que interessa baixar o custo final para o cliente.\\
+
+O objectivo é transformar actividade complexa dentro da rede e dentro do honeypot (uma máquina que está a ser constantemente inspeccionada) em
+informação útil que permita a um administrador de redes de uma empresa perceber os ataques que houve e tomar decições em tempo útil sobre como proteger a rede.
+
+%\subsection{Objectivo do Projecto}
+%O objectivo do projecto é informatizar um sistema na área de seguros, isto é, desde a simulação à contratação e configuração dos seguros.
+%Com esta informatização pretende-se que os utilizadores do sistema consigam realizar o processo com mais facilidade.
+%Também será desenvolvido um simulador multi-produto que junte às simulações unitárias toda a área de atribuição de descontos justificada pela multiplicidade de seguros.
 
 \section{\emph{Stakeholders}}
 
 \subsection{Cliente}
-Deloitte (Representante: João Lúcio Borbinha)
+Vision Space Technologies (Representante: Ulisses Araújo Costa)
 
 \subsection{Comprador}
-Companhias de Seguros
+Empresas que tenham uma rede informática de tamanho médio e que procurem soluções de prevenção e compreensão de ataques a nivel de segurança de redes.
+Portanto este produto é dirigido a empresas que podem ser ou não de informática, mas que tenham staff técnico para gerir a rede e os serviços
+informáticos que a empresa tem.
 
 \subsection{Outros \emph{Stakeholders}}
-Professores (\emph{input} de conhecimento técnico e supervisão do projecto):
+Professores (supervisão do projecto):
 \begin{itemize}
 \item João Miguel Fernandes
-\item Fernando Mário Martins
-\item José Alberto Saraiva
-\item Olga Maria Pacheco
+\item Victor Francisco Fonte
+\item António Nestor Ribeiro
+\item Vitor Manuel Rodrigues Alves
 \end{itemize}
 \subsection{Os Utilizadores do Produto}
 \begin{description}
 \item \textbf{Utilizador 1}
 \item Categoria: 
 
-Recém-proprietários de um veículo automóvel
+Administrador de Redes informáticas
 \item Responsabilidades do utilizador: 
 
-Tem a obrigação de criar um seguro após a compra do carro.
+Tem a obrigação de ajudar a melhorar a segurança da rede que administra.
 \item Nível de conhecimento tecnológico: 
 
-Conhecimentos básicos
-\item Outras características importantes:
-
-Idade igual ou superior a 18\\\\
-\end{description}
-\begin{description}
-\item \textbf{Utilizador 2}
-\item Categoria: 
-
-Utilizadores descontentes com o seu seguro actual
-\item Responsabilidades do utilizador: 
-
-Tem um seguro já criado
-\item Nível de conhecimento tecnológico: 
-
-Variado
-\item Outras características importantes: 
-
-Vontade de mudança, aberto a sugestões. Idade igual ou superior a 18.\\\\
+Conhecimentos avançados a nível de rede, ferramentas de inspecção de rede e administração Linux.
 \end{description}
 
-\subsection{\emph{Personas}}
-\begin{description}
-\item \textbf{Rui}
-
-51 anos, casado, 2 filhos
-
-Advogado, viaja com frequência
-
-Gosta de futebol e de dançar
-
-A família é o mais importante para ele
-
-\item \textbf{Paula}
-
-25 anos, solteira
-
-Agente de seguros
-
-Organizada e gosta de fazer compras
-
-Gosta de fotografia e viajar
-
-Gosta de novas tecnologias
-
-\end{description}
-\pagebreak
-\subsection{Prioridade dos Intervenientes}
-
-\begin{figure}[!htb]
-     \centering
+%\subsection{Prioridade dos Intervenientes}
+%\begin{figure}[!htb]
+%     \centering
 %     \includegraphics[scale=0.8]{images/piramide}
-     \caption{Prioritização dos intervenientes}
-\end{figure}
+%     \caption{Prioritização dos intervenientes}
+%\end{figure}
 
 \subsection{Contribuição dos Intervenientes}
-O cliente João Borbinha transmitiu ao grupo de trabalho conhecimento sobre o modelo de negócio em causa, e acompanhamento/aconselhamento periódico em relação às dúvidas resultantes do levantamento de requisitos. 
-
-Pelo contacto realizado com um agente de seguros, obtivemos informação relevante sobre o processo da contratação nos seguros Automóvel e Saúde.
+A empresa XPTO lda. tem uma rede que liga os seus 40 funcionários a serviços internos e externos à empresa. Tem também um administrador de rede que
+quer aumentar o grau de percepção sobre os ataques que esta rede sofre afim de tomar medidas para aumentar a segurança, sem por em
+causa o bom funcionamento dos serviços informáticos.\\
+A XPTO lda. compra o Delusion e instala na sua rede.
 
 \subsection{Suporte e Manutenção}
-Para suporte e manutenção estarão destacados os Administradores do sistema, técnicos que se espera terem conhecimento informático médio/alto, suficiente para executar a função com recurso apenas à documentação disponível (independentes dos developers originais).
+Para suporte e manutenção estarão destacados Administradores de sistemas, técnicos que se espera terem conhecimento informático médio/alto,
+suficiente para executar a função com recurso apenas à documentação disponível (independentes dos developers originais).
 
