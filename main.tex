@@ -1,15 +1,21 @@
-\documentclass[pdftex,12pt,a4paper]{report}
+\documentclass[pdftex,11pt,a4paper]{report}
 \usepackage[portuges]{babel}
 \usepackage{amssymb}
 \usepackage[utf8]{inputenc}
 \usepackage{url}
 \usepackage[pdftex]{graphicx}
+\usepackage{geometry}
 \usepackage{multirow}
 \usepackage{verbatim}
-\usepackage[pdftex, colorlinks=true, linkcolor=black, % clickable(and blue) urls
-urlcolor = blue, citecolor=black] {hyperref} % clickable citations
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[a4paper, pdftex, bookmarks, colorlinks,citecolor=darkblue,linkcolor=darkblue,urlcolor=darkblue,filecolor=darkblue]{hyperref}
 \usepackage{textcomp} %carregar o euro
 \usepackage{rotating} %texto na verticals
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+\usepackage{psboxit}
+\usepackage[T1]{fontenc}
+\usepackage{fancyvrb}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newcommand\T{\rule{0pt}{2.6ex}}
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}}
@@ -17,32 +23,99 @@ urlcolor = blue, citecolor=black] {hyperref} % clickable citations
 \setlength{\tabcolsep}{15pt}
 \frenchspacing
 
+\fancyhead{}
+\fancyfoot{}
+%% make the odd pages have the section name on the top right
+\fancyhead[RO]{\sffamily\bfseries \rightmark}
+%% make the even pages have the chapter name on the top left
+\fancyhead[LE]{\sffamily\bfseries \leftmark}
+
+%% page nums on the bottom in a nice box
+%% even side pages
+\fancyfoot[LE]{\psboxit{box 0.8 setgray fill}
+{\framebox[10mm][c]{\rule{0cm}{4mm}\color{black}{\bfseries \thepage}}}}
+%% odd side pages
+\fancyfoot[RO]{\psboxit{box 1 setgray fill}
+{\hspace{\textwidth}\psboxit{box 0.8 setgray fill}
+{\framebox[10mm][c]{\rule{0cm}{4mm}\color{black}{\bfseries \thepage}}}}}
+
+%% make the bottom line above the page number box
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footruleskip}{0mm}
+
+\pdfpagewidth=\paperwidth
+\pdfpageheight=\paperheight
+
+\renewcommand\familydefault{\sfdefault}% usar font sem serifas
+
+% definir acrónimos com itálico
+%\renewcommand*{\acf}[1]{\acffont{\textit{\acl{#1}}~\acfsfont{(\acs{#1})}}}
+
+\newtheorem{defin}{Definição}
+\geometry{verbose,a4paper,tmargin=30mm,bmargin=30mm,lmargin=20mm,rmargin=20mm}
+
+\pagestyle{fancy}
+%\lhead{}
+%\rhead{}
+
+%% now redefine the plain style pages (chapter pages, contents pages)
+%% to have the same page number stuff on the bottom
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyfoot[RO]{\psboxit{box 1 setgray fill}
+	{\hspace{\textwidth}\psboxit{box 0.8 setgray fill}
+	{\framebox[10mm][c]{\rule{0cm}{4mm}\color{black}{\bfseries \thepage}}}}}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0.5pt}
+}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{gray_ulisses}{gray}{0.55}
+\definecolor{castanho_ulisses}{rgb}{0.71,0.33,0.14}
+\definecolor{preto_ulisses}{rgb}{0.41,0.20,0.04}
+\definecolor{green_ulises}{rgb}{0.2,0.75,0}
+
+
+\definecolor{darkblue}{rgb}{0,0.1,0.5}
+
 %\usepackage{hyphenat}
 %\hyphenpenalty=10000 %remover hifenização nas mudanças de linha
 \renewcommand\familydefault{\sfdefault} %usar font sem serifas
-%\hyphenation{pseu-do-nyms}
 
-
-\title{	
-	\begin{tabular}{l r}
-	\large{Universidade do Minho} & \multirow{3}{*}{\includegraphics[width=0.2\textwidth]{images/UM}} \\
-	\large{Conselho de Cursos de Engenharia} & \\
-	\large{Mestrado em Engenharia Informática} & \\
-	\\
-	\\
-	\Large{\textbf{Análise e Concepção de Software}} & \\
-	\large{Ano Lectivo de 2009/2010} & \\
-	\\
-	\\
-	\\
-	\end{tabular}
-	\textbf{Multi-product Quotation Engine\\Documento de Análise de Requisitos}
+\begin{document}
+\begin{titlepage}
+\thispagestyle{empty}
+{\centering \large
+{\large\bf \textbf{Universidade do Minho} \\ Departamento de Informática}\\
+\vspace{1cm}
+\bf{UCE15}\\
+\vspace{2cm}
+\vspace{1cm}
+{\LARGE \textbf{Delusion}}\\
+\vspace{1cm}
+{\Large The biggest defense is deception}\\
+\vspace{1cm}
+%{\large \bf {}}
+\vspace{8.5cm}
 }
 
-\author{João Ferreira\\Marco Carneiro\\João Gonçalves\\Rui da Silva\\Rui Azevedo\\Paulo Serafim\\Paulo Monsanto}
-\date{5 de Dezembro de 2009}
-\begin{document}
-\maketitle
+\flushleft{ \emph{Grupo:\\}
+\vspace{0.4cm}
+\begin{tabular}{llll}
+Mário Ulisses Costa & pg15817 & Luís Ferreira & pg18779 \\
+Pedro Faria & pg17684 & Pedro Vieira & pg17803 \\
+Rui Gonçalo & pg18378 & Ricardo Alves & pg17904 \\
+Leonel Braga & pg17311 & Ricardo Ferreira & pg18375 \\
+Renato Neves & pg17229 & João Peixoto & pg19811 \\
+Jorge Mendes & pg16490 &  Marco Carneiro & pg17774\\
+Eduardo Conceição & pg17211 && 
+\end{tabular}
+\\
+}
+\vspace {1.5cm}
+\textbf{Braga, \today}\\
+\pagebreak
+\end{titlepage}
+%\maketitle
 \tableofcontents
 \input{informacao}
 \input{restricoes}
