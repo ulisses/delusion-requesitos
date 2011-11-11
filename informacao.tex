@@ -1,6 +1,69 @@
 \chapter{Informação do Projecto}
 \section{Motivação do Projecto}
 \subsection{Contexto}
+Esta ideia tem como principal sector de actividade a industria, ou seja irá vendido como produto. A ideia não
+existe e por si só é o aglomerar de várias ideias, com alguns componentes que irão ser únicos e nunca antes feitos.
+O produto final não existe. Esta ideia, graças a alguma experiência do promotor na área encontra-se numa fase de
+projecto com alguns componentes já muito bem estudados e prototipados.
+O actual mercado de negócio da ideia são todas as empresas de médio porte que prestem serviços na internet e que
+tenham interesse em defender a sua rede informática interna onde os seus serviços habitam.
+Os futuros mercados de negócio a 5 anos são essencialmente os mercados internacionais, Europa, Ásia e America
+do Norte essencialmente, onde existam os mesmos problemas supracitados.
+Apresentação da Ideia
+Esta ideia está relacionada com o tema de segurança e tem como principal objectivo criar um produto (chamemos
+caixa, um PC comum) que habita na ligação de uma rede interna à internet. Esta caixa irá ter um Linux, com a
+capacidade de garantir a segurança da rede interna. Para que o grau de segurança seja aumentado este produto irá
+ter os já comuns sistemas de protecção largamente utilizados, como firewall, IPS (Intrusion prevention system) e
+vários sistemas de log ao nível de rede. Relativamente a este ponto, irão ser criadas interfaces web para configurar
+e monitorizar toda a actividade maliciosa que a rede interna sofre.
+Para além disso irá ser desenvolvido um sistema honeypot que basicamente é um sistema que cria falsos serviços
+na rede com várias vulnerabilidades conhecidas activas. Assim, conseguiremos atrair um atacante mais
+rápidamente para esses serviços (e monitorizar a sua actividade), deixando assim os serviços reais livres de
+interesse por parte dos atacantes. Digamos que com isto queremos não só defender como também mostrar que
+temos alguns problemas para distrair a atenção de uma possível entidade maliciosa que poderia inflingir ataques na
+rede interna.
+Em nenhum momento estes serviços falsos irão criar problemas com os serviços reais, visto serem coisas
+independentes.
+Portanto, temos assim dois componentes que necessitam de ser investigados e desenvolvidos.
+Por um lado temos todas as camadas de segurança, que irão ser estudadas e integradas no nosso produto, com a
+acrescente de criar uma interface fácil e intuitiva para um Eng. de redes utilizar, configurar e fazer inspecção.
+Por outro lado temos a construção de um honeypot com a capacidade de criar serviços falsos na rede, atrair
+atacantes e ainda loggar toda a actividade maliciosa que for feita contra si. Este componente consiste numa
+máquina virtual (dentro do sistema operativo real da caixa) que é colocada numa DMZ da rede (para poder ser
+vista na internet) e tem de ter a capacidade de ser atacada e guardar o que foi feito, para conseguir criar um perfil
+do ataque e entender que tipos de ataques estão “na moda”.
+Esta parte de entender os ataques mais recentes utilizados tem como principal objectivo ajudar ao melhoramento
+do produto através da criação de novas regras tanto na firewall como no IPS.
+Este último ponto é fundamental: Os tipos de ataques estão sempre a mudar, as regras de uma firewall construída
+há 5 anos já não são válidas para os dias de hoje. Ao conseguir traçar um perfil do ataque que o honeypot sofreu,
+conseguimos garantir que estamos sempre actualizados sobre de que maneira conseguimos melhorar o nosso
+produto.
+Embora isto não interesse imediatamente ao cliente, interessa a quem produz as caixas pois assim conseguirá
+melhorar o produto garantindo a sua viabilidade/utilidade no futuro.
+Pontos de vista técnicos da ideia
+A componente de segurança da ideia passará essencialmente por investigação e aprendizagem da ferramentas mais
+comuns actualmente para protecção em redes, sejam iptables para firewalls ou o snort para IPS (existem outros que
+precisam de ser vistos e estudados).
+A inovação nesta ideia referente a esta componente está na criação de um interface web para a gestão destas
+camadas de segurança.
+Por outro lado temos a criação de um honeypot afim de forjar serviços na rede, que sejam visiveis para a internet.
+É interessante dizer que existem duas familias de honeypots os de AI (alta-interactividade) e os de BI (baixainteractividade).
+O que os distingue é a capacidade de forjar melhor ou pior os serviços vulneráveis na rede.
+Os honeypots de BI são serviços que são forjados através de simples scripts perl/bash/python e que por serem
+scripts teem limitações naturais, pois uma vez um atacante estando a interagir com um serviço ficticio telnet por
+exemplo, ele espera que todos os comandos telnet estejam disponiveis para ele, o que dificulta a construção do
+script, pois que o irá fazer terá que ter em atenção tudo o que um serviço telnet pode fazer. No entanto estes tipos
+de honeypot são interessantes para perceber levemente a natureza do ataque.
+Por outro lado os honeypots de AI costumam ser sistemas operativos reais, com falhas reais. O grande problema
+que nasce é: como inpeccionar o que se passa dentro de um sistema operativo sem que nenhum utilizador (até
+mesmo root) consiga perceber.
+O objectivo desta ideia aqui descrita é criar este honeypot AI e existem duas maneiras de o fazer:
+Através de uma máquina virtual Vmware por exemplo, onde deixamos o atacante fazer o que quiser dentro dessa
+máquina virtual e inpeccionamos todas as chamadas que são feitas ao VMware. O que pode ser muito dificil.
+Ou entao a adulteração do sistema operativo para que consigamos inspeccionar o que o atacante está a fazer e ao
+mesmo tempo fazê-lo sem que este se aperceba de que está a ser observado. Isto é mais fácil, no entanto passa por
+adulteração de várias system calls so Linux entre outras.
+
 Nos dias que correm, é fundamental para as seguradoras a disponibilização de simuladores de seguro aos seus clientes, o que constitui um excelente modo de publicitar as suas inovações no desenho da fórmula de cálculo do prémio.
 A inexistência no mercado de um simulador que agregue múltiplos seguros constituiu uma oportunidade para o desenvolvimento deste projecto, com grande potencial de interesse por parte das seguradoras, visto oferecer-lhes a vantagem de publicitar os seus descontos multi-seguro.
 \subsection{Objectivo do Projecto}
@@ -9,90 +72,49 @@ O objectivo do projecto é informatizar um sistema na área de seguros, isto é,
 \section{\emph{Stakeholders}}
 
 \subsection{Cliente}
-Deloitte (Representante: João Lúcio Borbinha)
+Vision Space Technologies (Representante: Ulisses Araújo Costa)
 
 \subsection{Comprador}
-Companhias de Seguros
+Empresas que tenham uma rede informática de tamanho médio e que procurem soluções de prevenção e compreensão de ataques a nivel de segurança de redes.
+Portanto este produto é dirigido a empresas que podem ser ou não de informática, mas que tenham staff técnico para gerir a rede e os serviços
+informáticos que a empresa tem.
 
 \subsection{Outros \emph{Stakeholders}}
-Professores (\emph{input} de conhecimento técnico e supervisão do projecto):
+Professores (supervisão do projecto):
 \begin{itemize}
 \item João Miguel Fernandes
-\item Fernando Mário Martins
-\item José Alberto Saraiva
-\item Olga Maria Pacheco
+\item Victor Francisco Fonte
+\item António Nestor Ribeiro
+\item Vitor Manuel Rodrigues Alves
 \end{itemize}
 \subsection{Os Utilizadores do Produto}
 \begin{description}
 \item \textbf{Utilizador 1}
 \item Categoria: 
 
-Recém-proprietários de um veículo automóvel
+Administrador de Redes informáticas
 \item Responsabilidades do utilizador: 
 
-Tem a obrigação de criar um seguro após a compra do carro.
+Tem a obrigação de ajudar a melhorar a segurança da rede que administra.
 \item Nível de conhecimento tecnológico: 
 
-Conhecimentos básicos
-\item Outras características importantes:
-
-Idade igual ou superior a 18\\\\
-\end{description}
-\begin{description}
-\item \textbf{Utilizador 2}
-\item Categoria: 
-
-Utilizadores descontentes com o seu seguro actual
-\item Responsabilidades do utilizador: 
-
-Tem um seguro já criado
-\item Nível de conhecimento tecnológico: 
-
-Variado
-\item Outras características importantes: 
-
-Vontade de mudança, aberto a sugestões. Idade igual ou superior a 18.\\\\
+Conhecimentos avançados a nível de rede, ferramentas de inspecção de rede e administração Linux.
 \end{description}
 
-\subsection{\emph{Personas}}
-\begin{description}
-\item \textbf{Rui}
-
-51 anos, casado, 2 filhos
-
-Advogado, viaja com frequência
-
-Gosta de futebol e de dançar
-
-A família é o mais importante para ele
-
-\item \textbf{Paula}
-
-25 anos, solteira
-
-Agente de seguros
-
-Organizada e gosta de fazer compras
-
-Gosta de fotografia e viajar
-
-Gosta de novas tecnologias
-
-\end{description}
-\pagebreak
-\subsection{Prioridade dos Intervenientes}
-
-\begin{figure}[!htb]
-     \centering
+%\subsection{Prioridade dos Intervenientes}
+%\begin{figure}[!htb]
+%     \centering
 %     \includegraphics[scale=0.8]{images/piramide}
-     \caption{Prioritização dos intervenientes}
-\end{figure}
+%     \caption{Prioritização dos intervenientes}
+%\end{figure}
 
 \subsection{Contribuição dos Intervenientes}
-O cliente João Borbinha transmitiu ao grupo de trabalho conhecimento sobre o modelo de negócio em causa, e acompanhamento/aconselhamento periódico em relação às dúvidas resultantes do levantamento de requisitos. 
-
-Pelo contacto realizado com um agente de seguros, obtivemos informação relevante sobre o processo da contratação nos seguros Automóvel e Saúde.
+A empresa XPTO lda. tem uma rede que liga os seus 40 funcionários a serviços internos e externos à empresa. Tem também um administrador de rede que
+quer aumentar o grau de percepção sobre os ataques que esta rede sofre afim de tomar medidas para aumentar a segurança, sem por em
+causa o bom funcionamento dos serviços informáticos.\\
+A XPTO lda. compra o Delusion e instala na sua rede.
 
 \subsection{Suporte e Manutenção}
-Para suporte e manutenção estarão destacados os Administradores do sistema, técnicos que se espera terem conhecimento informático médio/alto, suficiente para executar a função com recurso apenas à documentação disponível (independentes dos developers originais).
+Para suporte e manutenção estarão destacados Administradores de sistemas, técnicos que se espera terem conhecimento informático médio/alto,
+suficiente para executar a função com recurso apenas à documentação disponível (independentes dos developers originais).
 
