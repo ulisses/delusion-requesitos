@@ -1,0 +1,66 @@
+\documentclass[pdftex,12pt,a4paper]{report}
+\usepackage[portuges, english]{babel}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage[pdftex]{graphicx}
+\usepackage{multirow}
+\usepackage[pdftex, colorlinks=true, linkcolor=black, % clickable(and blue) urls
+urlcolor = blue, citecolor=black] {hyperref} % clickable citations
+\usepackage{textcomp} %carregar o euro
+\usepackage{rotating} %texto na verticals
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand\T{\rule{0pt}{2.6ex}}
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}}
+\newcommand{\comments}[1]{}
+\setlength{\tabcolsep}{15pt}
+\selectlanguage{english}  
+\frenchspacing
+
+%\usepackage{hyphenat}
+%\hyphenpenalty=10000 %remover hifenização nas mudanças de linha
+\renewcommand\familydefault{\sfdefault} %usar font sem serifas
+%\hyphenation{pseu-do-nyms}
+
+
+\title{	
+	\begin{tabular}{l r}
+	\large{Universidade do Minho} & \multirow{3}{*}{\includegraphics[width=0.2\textwidth]{images/UM}} \\
+	\large{Conselho de Cursos de Engenharia} & \\
+	\large{Mestrado em Engenharia Informática} & \\
+	\\
+	\\
+	\Large{\textbf{Análise e Concepção de Software}} & \\
+	\large{Ano Lectivo de 2009/2010} & \\
+	\\
+	\\
+	\\
+	\end{tabular}
+	\textbf{Multi-product Quotation Engine\\Documento de Análise de Requisitos}
+}
+
+\author{João Ferreira\\Marco Carneiro\\João Gonçalves\\Rui da Silva\\Rui Azevedo\\Paulo Serafim\\Paulo Monsanto}
+\date{5 de Dezembro de 2009}
+\begin{document}
+\maketitle
+\tableofcontents
+\input{informacao}
+\input{restricoes}
+\input{funcionais_6}
+\input{mdominio}
+\input{funcionais_8}
+\input{cartoes}
+\input{nonfunc}
+\input{not_functionals}
+\input{project_issues}
+
+\appendix
+\chapter{Glossário}
+\input{glossario}
+
+\chapter{\emph{Use Cases}}
+\input{usecases}
+\chapter{Diagrama de Navegação}
+\section{Diagrama de Navegação}
+\input{diagnav}
+\end{document}

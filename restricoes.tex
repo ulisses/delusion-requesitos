@@ -1,0 +1,83 @@
+\chapter{Restrições do Projecto}
+\section{Restrições impostas}
+\subsection{Restrições de Solução}
+No levantamento de requisitos não foi encontrada qualquer imposição não negociável de abordagem à solução dos problemas.
+
+\subsection{Ambiente de Instalação do Sistema}
+Este produto é destinado a ser instalado nos servidores de cada uma das companhias de seguros compradoras. Devido a essa multiplicidade o ambiente tecnológico esperado deve manter-se universal, não contemplando nenhuma especificação particular a um determinado tipo de configuração empresarial.
+
+\subsection{Aplicações Associadas}
+Como o produto se destina a uma multiplicidade de empresas, não é possível saber com que software vai ser integrado. Contudo, para facilitar tal integração com outros \emph{softwares} da empresa, será criada uma API documentada no manual de funcionamento para promover a interacção entre este software e outros já existentes.
+
+\subsection{Software Off-the-Shelf}
+\begin{itemize}
+\item Visual Paradigm for UML 7.1 SP1: usado para modelar o sistema de negócio e o sistema informático
+\item Volere Template: usado para elaborar o documento de requisitos
+\item NetBeans 6.7.1: irá ser usado para conceber o sistema informático
+\item Microsoft SQL Server 2008: sistema de armazenamento persistente de dados
+\end{itemize}
+
+\subsection{Ambiente de Trabalho}
+Os Utilizadores(Registado e Anónimo) do produto irão aceder ao sistema de onde pretenderem, em qualquer dispositivo electrónico que suporte o acesso \emph{web} e a tecnologia Java.
+
+Os Mediadores executarão as suas funções laborais maioritariamente no seu local de trabalho (delegações, call-center), assim como os Colaboradores. No entanto, poderão também executá-las nos mesmos moldes que os Utilizadores anteriormente descritos.
+
+Como este simulador de seguros não recebe nem é afectado por qualquer \emph{input} do ambiente físico exterior, estes ambientes expectáveis não terão influência directa no desenho do sistema.
+
+\subsection{Restrições de Calendário}
+\begin{description}
+\item 7 de Dezembro de 2009: 
+\begin{itemize}
+\item Documento de Requisitos
+\end{itemize}
+\item 11 de Janeiro de 2010: 
+\begin{itemize}
+\item Protótipo V1 + Documento Requisitos fechado
+\end{itemize}
+\item 8 de Fevereiro de 2010: 
+\begin{itemize}
+\item Protótipo V2 + Desenho da arquitectura + Usabilidade
+\end{itemize}
+\item 5 de Abril de 2010: 
+\begin{itemize}
+\item Protótipo V3
+\end{itemize}
+\item 17 de Maio de 2010: 
+\begin{itemize}
+\item Produto Final + Apresentação + Documentação Final
+\end{itemize}
+\end{description}
+
+\section{Nomenclatura e Definições}
+\subsection{Termos Usados no Projecto}
+Ver Anexo 1.
+\section{Factos Relevantes e Suposições}
+\subsection{Regras de Negócio}
+\pagebreak
+\begin{table}[t]
+\begin{center}
+\begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{8cm}|}
+\hline \multicolumn{3}{|c|}{\T \B \textbf{Categoria}} & \multicolumn{1}{|c|}{\textbf{Requisitos}}\\
+\hline \multirow{4}{4cm}{\begin{sideways}\parbox{3cm}{\footnotesize{Corretor de Seguros}}\end{sideways}} & \multirow{4}{4cm}{\T \B \begin{sideways}\parbox{3cm}{\footnotesize{Agente de Seguros}}\end{sideways}} & \multirow{4}{4cm}{\begin{sideways}\parbox{3cm}{\footnotesize{Mediador de Seguros Ligado}}\end{sideways}} & \T \B \scriptsize{Celebrar um contrato com a empresa de seguros (não aplicável  a corretores de seguros)}\\
+& & & \scriptsize{No caso das pessoas colectivas, garantir a presença, em permanência, de um número mínimo de membros do órgão de administração responsável pela actividade de mediação de seguros ou de pessoas directamente envolvidas na actividade de mediação de seguros, por cada estabelecimento aberto ao público.}\\
+& & &\\
+\cline{3-4} & \multicolumn{2}{|c|}{ } & \T \B \scriptsize{Estar abrangido por um contrato de seguro que garanta a sua responsabilidade civil profissional}\\
+& \multicolumn{2}{|c|}{ } & \scriptsize{Dispor de arquivo próprio}\\
+& \multicolumn{2}{|c|}{ } & \scriptsize{No caso das pessoas singulares, garantir a presença, em permanência, de um número mínimo de membros do órgão de administração responsável pela actividade de mediação de seguros ou de pessoas directamente envolvidas na actividade de mediação de seguros, por cada estabelecimento aberto ao público, excepto quando exerça actividade através de um único estabelecimento}\\
+& \multicolumn{2}{|c|}{ } & \scriptsize{Dispor de meios informáticos que permitam a comunicação por via electrónica e o acesso à Internet}\\
+\cline{2-4} \multicolumn{3}{|c|}{ } & \T \B \scriptsize{Celebrar um seguro de caução ou garantia bancária com valor mínimo de 15.000 \texteuro ou, se superior, ao valor correspondente a 4\% sobre a totalidade dos fundos confiados ao corretor de seguros pelos tomadores de seguros para serem entregues às empresas de seguros ou por estas para serem entregues aos tomadores de seguros, segurados ou beneficiários, durante o exercício económico precedente ao de subscrição ou renovação da garantia bancária ou do seguro de caução}\\
+\multicolumn{3}{|c|}{ } & \scriptsize{Possuir contabilidade organizada}\\
+\multicolumn{3}{|c|}{ } & \scriptsize{Dispor, no mínimo, de um estabelecimento aberto ao público}\\
+\multicolumn{3}{|c|}{ } & \scriptsize{Dispor de um sítio na Internet}\\
+\multicolumn{3}{|c|}{ } & \scriptsize{Manter um analista de risco, caso exerça actividade nos ramos Não Vida}\\
+\multicolumn{3}{|c|}{ } & \scriptsize{No caso de pessoa singular, não exercer qualquer profissão que possa diminuir a independência no exercício da actividade de mediação e, no caso de pessoa colectiva, ter objecto social exclusivo a actividades no sector financeiro}\\
+\multicolumn{3}{|c|}{ } & \scriptsize{No caso das pessoas colectivas, dispor de um capital social não inferior a 50.000 \texteuro inteiramente realizado na data do acto da constituição, bem como designar um Revisor Oficial de Contas para proceder à revisão legal das contas}\\
+\multicolumn{3}{|c|}{ } & \scriptsize{No caso das pessoas colectivas, a estrutura societária não pode constituir um risco para a independência e imparcialidade do corretor face às empresas de seguros}\\
+\multicolumn{3}{|c|}{ } & \scriptsize{No caso das pessoas colectivas, aptidão dos detentores de uma participação qualificada para garantir a gestão sã e prudente da sociedade}\\
+\hline
+\end{tabular}
+\caption{Estatutos na Mediação de Seguros}
+\end{center}
+\end{table}
+\pagebreak
+
