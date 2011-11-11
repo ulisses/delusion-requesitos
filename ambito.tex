@@ -20,10 +20,21 @@ Neste diagrama iremos mostrar quais as entidades externas ao sistema informátic
 isto é, quais as actividades que o sistema informático vai suportar no negócio em questão. 
 
 \subsection{Diagrama de Contexto}
+Para explicar com maior detalhe o sistema de que estamos a falar mostramos na Figura \ref{fig:dcont} o diagrama de contexto.
 
-	\begin{figure}[!htb]
-		\centering
-		\includegraphics[scale=0.8]{images/DiagramaContexto}
-		\caption{Diagrama de Contexto}
-	\end{figure}
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.8]{images/DiagramaContexto}
+\caption{Diagrama de Contexto}
+\label{fig:dcont}
+\end{figure}
+
+Como se pode ver nesse diagrama apresentamos os três elementos mais importantes deste projecto, o Visualizador, o Sensor de rede e o Honeypot.
+O Visualizador apresenta uma interface web para o utilizador deste sistema, o Sensor de rede usa como entidades externas duas ferramentas para fazer inspecção
+ao nível de rede: o tshark e o snort. Ainda temos o componente de Honeypot que usa o DQEMU (a ferramenta que vamos desenvolver), este sistema tem ainda
+como actor o atacante, pois este irá ser atraído para este sistema e será gravada toda a sua actividade dentro do Honeypot.\\
+Existem dois tipos de utilizadores do Visualizador: O utilizador Admin que tem total controlo sobre o sistema, podendo ler informação sobre os ataques, bem como
+criar novos honeypots na rede com determinadas caracteristicas. Temos ainda o utilizador Normal que terá os mesmos privilégios que o Admin, mas apenas num
+segmento menor da rede, segmento esse que será o Admin a atribuir.
+
 
