@@ -30,5 +30,4 @@ clean:
 	@echo "Cleaning the shop"
 	@find . -maxdepth 1 \( \! -iname README* \! -iname .gitignore \! -iname "*.bst" \! -iname "*.bib" \! -iname "*.tex" -type f \! -iname "makefile" \! -iname "*.sty" \! -iname "*.cls" \) -exec rm -f '{}' \;
 	@find . \( -name *~ -or -name *.*~ \) -exec rm -f '{}' \;
-	@rm -f icst12-dot2tex-*.tex
 
