@@ -17,7 +17,7 @@ detecta os ataques e regista também na Base de dados estes ataques.
 \caption{Modelo de Domínio Geral}
 \label{fig:mdgeral}
 \end{figure}
-
+\pagebreak
 Na Figura \ref{fig:mdhoney} podemos ver o modelo de domínio do Honepot em maior detalhe. É importante referir que este projecto
 prevê que o Honeypot esteja a correr numa máquina virtual, porque assim facilita a inspecção. Neste nível de granularidade vemos que existem duas entidades,
 uma o sistema operativo Host que é o sistema operativo que corre a máquina virtual e o sistema operativo guest, que é o sistema operativo virtualizado.
@@ -33,6 +33,7 @@ Este guest pode ter várias personalidades, isto é sistemas operativos reais a 
 \caption{Modelo de Domínio HoneyPot}
 \label{fig:mdhoney}
 \end{figure}
+\pagebreak
 
 A Figura \ref{fig:mdrede} apresenta o modelo de domínio do sensor de rede, que neste caso será o conjunto de três ferramentas, sendo que uma delas será
 construída no ambito deste produto - o Delusion collector daemon. Aqui irá ser necessário utilizar as informações que o tshark e o snort collectam da rede
@@ -45,6 +46,7 @@ e ainda fazer polling dos alertas do snort.
 \caption{Modelo de Domínio Rede}
 \label{fig:mdrede}
 \end{figure}
+\pagebreak
 
 A Figura \ref{fig:mdvis} apresenta o modelo de domínio do visualizador onde se pode ver um Filtro que o utilizador usa para restringir a amostragem de
 informação (por exemplo pode ser: "mostra-me todos os alertas de ataques das últimas 24 horas"). Este Filtro irá usar a Base de dados para extraír a informação

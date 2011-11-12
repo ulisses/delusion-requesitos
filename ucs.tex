@@ -1,7 +1,6 @@
+\newpage
 \section{Modelos de Casos de Uso}
 \subsection{Modelo de Casos de Uso de alto nível}
-
-
 Diagrama geral de Use Cases
 
 \begin{comment}
@@ -12,12 +11,8 @@ Diagrama geral de Use Cases
 \end{figure}
 \end{comment}
 
-
 \subsection{Modelos de Casos de Uso detalhado}
-
-
 \subsubsection{\textbf{1 - HoneyPot}}
-
 \begin{itemize}
  \item \textbf{Identificar system calls e actualizar BD} -  Tal como apresentado no diagrama abaixo, o QEMU é capaz de identificar system calls
  do guest OS mais seu contexto. Após detectar uma chamada este actualiza a Base de dados com essa informação. 
@@ -26,18 +21,14 @@ Diagrama geral de Use Cases
  criando assim um ficheiro em formato vídeo para, mais tarde o utilizador poder ver.
  \end{itemize}
 
-
-\begin{figure}[!htb]
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[scale=0.80]{images/ucs/HoneyPot}
 	\caption {Diagrama de use case, parte do HoneyPot}
 \end{figure}
 \pagebreak
 
-
 \subsubsection{\textbf{2 - Rede}}
-
-
 \begin{itemize}
  \item \textbf{Captura trâfego} - O Snort e o TShark tem como função capturar todo o tipo de trâfego que passe pela rede. Toda essa informação
  irá convergir para o Delusion Collector Daemon (DCD) que irá registar essa informação na base de dados.
@@ -46,9 +37,7 @@ Diagrama geral de Use Cases
  alerta, que será capturado pelo DCD.
  \end{itemize}
 
-
-
-\begin{figure}[!htb]
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[scale=0.80]{images/ucs/Rede}
 	\caption {Diagrama de use case, parte da Rede}
@@ -80,7 +69,7 @@ O \uticomum terá como interacção com o sistema as seguintes funcionalidades:
  \item \textbf{Configurar Honeypot} - Finalmente, o utilizador poderá também configurar o \emph{honeypot}. A sua explicação estará mais detalhada em~\ref{subsubsec: confighoney} - 4.
 \end{itemize}
 
-\begin{figure}[!htb]
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[scale=0.80]{images/ucs/Visualizador}
 	\caption {Diagrama de use case, parte da Rede}~\label{fig: casodeusovisual}
@@ -98,7 +87,7 @@ Esta funcionalidade está divida em três acções que o utilizador poderá toma
  \item \textbf{Indicar vulnerabilidades} - finalmente, o utilizador poderá também configurar certas vulnerabilidades nos serviços activos do \emph{honeypot}.
 \end{itemize}
 
-\begin{figure}[!htb]
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[scale=0.80]{images/ucs/ConfHoneyPot}
 	\caption {Diagrama de use case, configuração HoneyPot}~\label{fig: confighoney}
@@ -106,7 +95,6 @@ Esta funcionalidade está divida em três acções que o utilizador poderá toma
 \pagebreak
 
 \subsubsection{\textbf{5 - Configuração Rede}}
-
 Como se pode ver na Figura~\ref{fig: confrede}, o utilizador poderá, caso tenha permissões para isso, configurar certas ferramentas que actuam sobre a rede. Desse modo, tem-se:
 
 \begin{itemize}
@@ -116,15 +104,14 @@ Como se pode ver na Figura~\ref{fig: confrede}, o utilizador poderá, caso tenha
  \item \textbf{Configurar Rede} - esta funcionalidade diz respeito aos diversos parâmetros restantes que se podem modificar na rede. Tem-se como exemplo, a configuração de ...
 \end{itemize}
 
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[scale=0.80]{images/ucs/ConfRede}
-	\caption {Diagrama de use case, configuração Rede}~\label{fig: confrede}.
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.80]{images/ucs/ConfRede}
+\caption {Diagrama de use case, configuração Rede}~\label{fig: confrede}.
 \end{figure}
 \pagebreak
 
 \subsubsection{\textbf{6 - Configuração Utilizadores}}
-
 Como na maioria dos sistemas de \emph{software}, haverá um controlo/gestão de utilizadores por parte de um ou mais \emph{administradores}. Assim, cabe ao \admini fazer essa gestão a partir das seguintes funcionalidades, consoante se pode ver na Figura~\ref{fig: confutil}:
 
 \begin{itemize}
@@ -133,10 +120,10 @@ Como na maioria dos sistemas de \emph{software}, haverá um controlo/gestão de 
  \item \textbf{Remover Utilizador} - finalmente, o \admini poderá eliminar utilizadores. A eliminação de um utilizador poderá implicar também a eliminação de outros registos.
 \end{itemize}
 
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[scale=0.80]{images/ucs/ConfUtilizadores}
-	\caption {Diagrama de use case, configuração Utilizadores}~\label{fig: confutil}
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.80]{images/ucs/ConfUtilizadores}
+\caption {Diagrama de use case, configuração Utilizadores}~\label{fig: confutil}
 \end{figure}
 \pagebreak
 
