@@ -125,11 +125,11 @@ Eduardo Conceição & pg17211 &&
 \textbf{Braga, \today}\\
 \pagebreak
 \end{titlepage}
-%\maketitle
+
+\pagenumbering{roman}
 % indices
 \dominitoc
 \dominilof
-\dominilot
 \renewcommand{\contentsname}{Índice}
 \tableofcontents
 \addcontentsline{toc}{chapter}{\contentsname}
@@ -137,12 +137,10 @@ Eduardo Conceição & pg17211 &&
 \listoffigures
 \addcontentsline{toc}{section}{\listfigurename}
 \renewcommand{\listtablename}{Índice de Tabelas}
-\listoftables
-\addcontentsline{toc}{section}{\listtablename}
 
-
+\newpage
+\pagenumbering{arabic}
 \addtocounter{mtc}{+1}
-
 \input{informacao} %done
 \input{restricoes}
 %Requesitos funcionais
