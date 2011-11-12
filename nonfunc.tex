@@ -49,33 +49,6 @@ todas as potencialidades que o produto disponibiliza.
 
 
 
-
-% Início de requisito
-
-% Este eu não sei que queres dizer com ele por isso vou deixar assim 
-\section{Requisitos de Performance}
-\subsection{Requisitos de Velocidade e Latência}
-\begin{itemize}
-\item A consulta da informação guardada não deverá demorar mais que 10 segundos.
-\item A aplicação de filtros até encontrar a informação que se pretende não deverá demorar mais que 10 minutos.
-\end{itemize}
-
-% Fim de requisito
-
-
-
-
-% Início de requisito
-% Este nao acho que faça muito sentido, um japonês tem que utilizar o horário GMT ?
-\subsection{Requisitos de Precisão}
-\begin{itemize}
-\item O relógio do sistema trabalhará em GMT.
-\end{itemize}
-
-% Fim de requisito
-
-
-
 % Início de requisito
 \subsection{Requisitos de Fiabilidade e Disponibilidade}
 \begin{itemize}
@@ -89,7 +62,7 @@ todas as potencialidades que o produto disponibiliza.
 % Início de requisito
 
 \begin{description}
-\item[Requisito] O produto não pode deixar de registar eventos maliciosos.
+\item[Requisito] O produto não pode deixar de registar :eventos maliciosos.
 \item[Motivação] Caso o produto não consiga registar todos os eventos maliciosos vai ser pouco fiável e pouco útil, pois, a principal utilidade
 do sistema é que este seja capaz de registar todos os eventos maliciosos.
 \item[Fit Criterion] Em 10000 eventos ocorridos, o sistema tem q ser registar pelo menos 9999. 
@@ -109,21 +82,6 @@ complicado ver a informação coletada.
 % Fim de requisito
 
 
-% Acho que os dois seguintes nao interessam ate aos comments
-\subsection{Requisitos de Longevidade}
-\begin{itemize}
-\item É esperado que o produto desempenhe a sua função correctamente de forma constante, até que a regulamentação da área de domínio que rege o seu funcionamento seja alterada.
-\end{itemize}
-
-\section{Requisitos Operacionais e Ambientais}
-\subsection{Ambiente Físico Esperado}
-\begin{itemize}
-\item É esperado que este produto seja instalado numa rede num ambiente de uma empresa, dentro de um espaço fechado com ar condicionado e sistemas contra falhas de energia.
-\end{itemize}
-%%%%%%%%%%
-
-
-
 % Início de requisito
 
 \begin{description}
@@ -136,11 +94,27 @@ posteriores, no Google Chrome 10 e posteriores e finalmente Apple Safari 4 e pos
 
 % Fim de requisito
 
+
+% Início de requisito
 \section{Requisitos de Manutenção e Suporte}
 \subsection{Requisitos de Manutenção}
 \begin{description}
-\item[Requisito] O produto deve poder ser mantido por utilizadores e \emph{developers} que não os originais.
-\item[Fit Criterion] O produto deve ser auto-suficiente em termos de suporte para utilizadores e \emph{developers} alheios ao desenvolvimento 
+\item[Requisito] O produto deve poder ser mantido por utilizadores e developers que não os originais.
+\item[Motivação] Caso o produto esteja dependente dos utilizadore e developers originais, irá estar condenado logo à partida. Os potenciais 
+compradores em princípio também saberão isso e não quererão ficar sempre dependentes de quem lhes vendeu o sistema
+\item[Fit Criterion] O produto deve ser auto-suficiente em termos de suporte para utilizadores e developers alheios ao desenvolvimento 
 do produto, com recurso apenas ao manual de utilização.
 \end{description}
 
+% Fim de requisito
+
+
+% Início de requisito
+\section{Requisitos de Cultura e Política}
+\begin{description}
+\item[Requisito] O sistema não deverá ter conteúdos que possam ofender culturas e/ou religiões 
+\item[Motivação] Caso isto não se cumpra os potenciais compradores poderão rejeitar o produto
+\item[Fit Criterion] Opinião positiva dos stakeholders.
+\end{description}
+
+% Fim de requisito
