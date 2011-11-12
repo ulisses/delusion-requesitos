@@ -8,19 +8,19 @@
 \begin{description}
     \item \textbf{Confidencialidade}
 
-    Propriedade de segurança que tem como finalidade garantir que o conteúdo da mensagem só é do conhecimento dos intervenientes legítimos
+    Propriedade de segurança que tem como finalidade garantir que o conteúdo da mensagem só é do conhecimento de intervenientes legítimos.
 \end{description}
 
 \begin{description}
     \item \textbf{Firewall}
 
-    Uma firewall é um dispositivo ou um conjunto de dispositivos que tem como função permitir ou negar certas transmissões de rede, protegendo desta forma o sistema onde está instalada, pois todas as ligações não autorizadas são bloqueadas, permitindo apenas ligações legítimas.
+    Uma firewall é um dispositivo, ou um conjunto de dispositivos, que tem como função permitir ou negar certas transmissões de rede, protegendo desta forma o sistema onde está instalada. Numa rede em que esteja instalada uma \textit{Firewall} todas as ligações não autorizadas são bloqueadas, permitindo apenas ligações legítimas.
 \end{description}
 
 \begin{description}
     \item \textbf{Gateway}
     
-    Um gateway é um nodo de rede que actua como um elo de ligação entre duas redes distintas.
+    Um gateway é um nodo de uma rede que actua como um elo de ligação entre duas redes distintas.
 \end{description}
 
 \begin{description}
@@ -33,8 +33,8 @@
     \end{itemize}
     
     Os dados recolhidos durante o funcionamento de um \textit{Honeypot} auxiliam os administradores de sistema a proteger os serviços reais.\\
-
     
+    Geralmente num Honeypot são colocados serviços cujas vulnerabilidades são conhecidas, de forma a atrair os atacantes para uma máquina que não possui informações importantes.
 \end{description}
 
 \begin{description}
@@ -46,19 +46,16 @@
 \begin{description}
     \item \textbf{Intrusion Detection System}
     
-    Um sistema de detecção de intrusões (\textit{IDS}) é um dispositivo que monitoriza a rede, ou até as actividades de um dado sistema, em busca de actividades maliciosas ou violações da política da rede imposta. O resultado desta monitorização é exportado através de \textit{logs}, para que mais tarda possa ser consultada pelos administradores de sistema.
-\end{description}
-
-\begin{description}
-    \item \textbf{IpTables}
-\end{description}
-
-\begin{description}
-    \item \textbf{Kernel}
+    Um sistema de detecção de intrusões (\textit{IDS}) é um dispositivo que monitoriza a rede, ou até as actividades de um dado sistema, em busca de actividades maliciosas ou de violações da política da rede imposta. O resultado desta monitorização é exportado através de \textit{logs}, para que mais tarde possa ser consultada pelos administradores de sistema.
 \end{description}
 
 \begin{description}
     \item \textbf{Máquina Virtual}
+    
+    Com uma Máquina Virtual consegue-se simular através de software o funcionamento de um computador real. Este funcionamento permite correr sistemas operativos como se fossem aplicações de outros sistemas operativos.\\
+
+    O sistema operativo onde a máquina virtual corre é designado de \textit{host}.
+    O sistema operativo que está a ser virtualizado é designado de \textit{guest}.
 \end{description}
 
 \begin{description}
@@ -75,40 +72,58 @@ O \textit{Nfcapd}é uma ferramenta designada como um \textit{collector}, cujo ob
 
 \begin{description}
     \item \textbf{Nmap}
+
+   O \textit{NMap} é uma ferramenta gratuita e \textit{open-source} usada para explorar uma infraestrutura de rede, ou até em auditorias de segurança. Com o \textit{Nmap} é possível encontrar que sistemas operativos estão instalados, que serviços -- incluindo versões --  estão disponibilizados nas várias máquinas da rede.
 \end{description}
 
 \begin{description}
     \item \textbf{Qemu}
+
+    O \textit{QEMU} é uma ferramenta \textit{open-source} que permite criar máquinas virtuais.
 \end{description}
 
 \begin{description}
     \item \textbf{Sniffer}
+    Um \textit{Sniffer} tem como finalidade interceptar e registar o trâfego gerado numa rede. 
 \end{description}
 
 \begin{description}
     \item \textbf{Softflowd}
 
-Esta ferramenta é designada como um \textit{exporter}, cujo objectivo é monitorizar a rede e exportar a informação de flows.
+    Esta ferramenta é designada como um \textit{exporter}, cujo objectivo é monitorizar a rede e exportar a informação de flows.
 \end{description}
 
 \begin{description}
     \item \textbf{Snort}
 
-O Snort é um \textit{IDS (Intrusion Detection System) Open Source}. A sua função consiste em analisar o tráfego da rede em busca de possíveis ataques. Para isso, dispõe de uma base de dados de assinaturas de pacotes correspondentes a tráfego malicioso (chamadas regras). Esta base de dados é composta por regras criadas pelos utilizadores com finalidades diferentes, por exemplo: detectar IPs ou portas utilizadas, ou até análisar o payload dos pacotes.
+    O Snort é um \textit{IDS (Intrusion Detection System) Open Source}. A sua função consiste em analisar o tráfego da rede em busca de possíveis ataques. Para isso, dispõe de uma base de dados de assinaturas de pacotes correspondentes a tráfego malicioso (chamadas regras). Esta base de dados é composta por regras criadas pelos utilizadores, com finalidades diferentes, como por exemplo: detectar IPs ou portas utilizadas, ou até análisar o payload dos pacotes.
+\end{description}
+
+\begin{description}
+    \item \textbf{System Call}
+
+    Uma \textit{System Call} é um serviço disponibilizado pelo sistema operativo às aplicações, para que estas consigam utilizar os vários elementos do computador, como por exemplo escrever ou ler a partir de um ficheiro.
 \end{description}
 
 \begin{description}
     \item \textbf{Router}
-\end{description}
 
-\begin{description}
-    \item \textbf{Tabela de Encaminhamento}
+    Um router é um dispositivo que permite a ligação entre duas ou mais redes distintas.
 \end{description}
 
 \begin{description}
     \item \textbf{Tshark}
+    O \textit{Tshark} é uma ferramenta utilizada para observar na linha de comandos os registos gerados pelo \textit{Wireshark}.
 \end{description}
 
 \begin{description}
-    \item \textbf{WebService}
+    \item \textbf{Wireshark}
+
+    O \textit{Wireshark} é uma ferramenta utilizada para interceptar e registar pacotes de rede.
+\end{description}
+
+\begin{description}
+    \item \textbf{Web Service}
+    
+    Um \textit{Web Service} é um método de comunição entre dois dispositivos electrónicos através de uma rede.
 \end{description}
