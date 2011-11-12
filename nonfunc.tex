@@ -1,25 +1,58 @@
 \chapter{Requisitos Não-Funcionais}
 \minitoc
+
 \section{Requisitos de Aspecto e Percepção}
+
+% Início de requisito
+
 \subsection{Requisitos de Estilo}
 \begin{description}
-\item[Requisito] O produto deve ter uma aparência profissional.
-\item[Fit Criterion] Opinião favorável de todos os criadores do produto.
+\item[Requisito] O visualizador presente no produto deve ter uma aparência profissional.
+\item[Motivação] O utilizador irá assim obter uma experiência de utilização mais positiva e irá sentir maior confiança e robustez
+ao usar o produto.
+\item[Fit Criterion] Opinião favorável de todos os stakeholders.
 \end{description}
+
+
+% Fim de requisito
+
+
+
+% Início de requisito
 
 \section{Requisitos Humanos e Usabilidade}
 \subsection{Requisitos de Usabilidade}
 \begin{description}
-\item[Requisito] O produto não deve ser aborrecido ou maçador de usar.
-\item[Fit Criterion] Não abusar no uso de cores muito brilahntes, tamanho de letra sempre igual.
+\item[Requisito] O visualizador do produto deverá ser dinamico e não mostrar a informação sempre da mesma forma, sendo capaz de destacar informação mais importante de informação menos importante.
+\item[Motivação] Este requisito é importante para que o utilizador não se sinta aborrecido a usar o sistema, bem como, 
+para que a informação mais importante não lhe passe facilmente despercebida.  
+\item[Fit Criterion] Opinião favorável dos stakeholders.
 \end{description}
+
+
+% Fim de requisito
+
+
+% Início de requisito
+
 
 \section{Requisitos de Aprendizagem}
 \begin{description}
 \item[Requisito] Um administrador de redes familiarizado com Linux e ficheiros log deve conseguir utilizar o produto facilmente.
-\item[Fit Criterion] Um grupo de pessoas que já fizeram administração de redes devem conseguir ambientar-se ao front-end no espaço de uma hora.
+\item[Motivação] Isto é importante para que não haja grandes custos a treinar uma pessoa para usar o sistema, bem como, para que esta consiga usar 
+todas as potencialidades que o produto disponibiliza.
+\item[Fit Criterion] Um grupo de pessoas que já fizeram administração de redes, devem conseguir utilizar em pleno o sistema no espaço de uma hora.
 \end{description}
 
+
+% Fim de requisito
+
+
+
+
+% Início de requisito
+
+% Este eu não sei que queres dizer com ele por isso vou deixar assim 
 \section{Requisitos de Performance}
 \subsection{Requisitos de Velocidade e Latência}
 \begin{itemize}
@@ -27,15 +60,56 @@
 \item A aplicação de filtros até encontrar a informação que se pretende não deverá demorar mais que 10 minutos.
 \end{itemize}
 
+% Fim de requisito
+
+
+
+
+% Início de requisito
+% Este nao acho que faça muito sentido, um japonês tem que utilizar o horário GMT ?
 \subsection{Requisitos de Precisão}
 \begin{itemize}
 \item O relógio do sistema trabalhará em GMT.
 \end{itemize}
 
+% Fim de requisito
+
+
+
+% Início de requisito
 \subsection{Requisitos de Fiabilidade e Disponibilidade}
 \begin{itemize}
 \item O produto deverá funcionar sem falhas inesperadas em 99 de 100 utilizações.
 \end{itemize}
+
+% Fim de requisito
+
+
+
+% Início de requisito
+
+\begin{description}
+\item[Requisito] O produto não pode deixar de registar eventos maliciosos.
+\item[Motivação] Caso o produto não consiga registar todos os eventos maliciosos vai ser pouco fiável e pouco útil, pois, a principal utilidade
+do sistema é que este seja capaz de registar todos os eventos maliciosos.
+\item[Fit Criterion] Em 10000 eventos ocorridos, o sistema tem q ser registar pelo menos 9999. 
+\end{description
+
+% Fim de requisito
+
+% Início de requisito
+
+\begin{description}
+\item[Requisito] O visualizador do sistema tem, sempre, que estar disponível para o utilizador.
+\item[Motivação] Caso o visualizador não esteja disponível o sistema perde praticamente toda a sua utilidade, já que, sem este fica muito mais 
+complicado ver a informação coletada.
+\item[Fit Criterion] Salvo falhas de energia, hardware, terceiros e catástrofes naturais o visualizador deve estar sempre disponível ao utilizador. 
+\end{description
+
+% Fim de requisito
+
+
+
 
 \subsection{Requisitos de Longevidade}
 \begin{itemize}
