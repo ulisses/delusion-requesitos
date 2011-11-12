@@ -2,48 +2,49 @@
 \minitoc
 \section{Restrições impostas}
 \subsection{Restrições de Solução}
-O produto de software que irá ser desenvolvido está restrito a duas topologias de instalação distintas, as quais dependem da infraestrutura de rede onde o produto será montado. A escalabilidade e a performance da rede são os principais factores que levaram à concepção destas duas soluções.\\
+    A \textit{appliance} que irá ser desenvolvida está restrita a duas topologias de instalação distintas, as quais dependem da infraestrutura de rede onde o produto será montado. A escalabilidade e a performance da rede são os principais factores que levaram à concepção destas duas soluções. \\
 
-A topologia apresentada na figura ~\ref{img:topo1} é uma solução mais simples, mais genérica, podendo ser considerada uma solução \textit{plug-and-play}, uma vez que não são necessárias configurações de rede onde o \textit{delusion} será montado. Esta é uma solução que tem como objectivo servir um número limitado de utilizadores, dado que a sua performance decai consideravelmente com o aumentar do trâfego de rede. \\
+    A topologia apresentada na Figura ~\ref{img:topo1} é uma solução mais simples, mais genérica, podendo ser considerada uma solução \textit{plug-and-play}, uma vez que não são necessárias configurações de rede onde o \textit{Delusion} será montado. Esta é uma solução que tem como objectivo servir um número limitado de utilizadores, dado que a sua performance decai consideravelmente com o aumentar do trâfego de rede. \\
 
 \begin{figure}
 	\centering	
 	\includegraphics[scale=0.6]{images/topologia1.png}
-	\caption{Topologia de Rede 1}
+	\caption{Topologia de Rede Plug-and-Play}
     \label{img:topo1}
 \end{figure}
 
-A segunda topologia, ilustrada na figura ~\ref{img:topo2}, é uma solução mais escalavel, não tendo um número máximo de utilizadores que consegue servir. Portanto, esta solução tem como objectivo servir uma infraestrutura de rede com dimensões maiores do que a primeira topologia. Como se pode observar na figura ~\ref{img:topo2}, esta solução divide a infraestrutura de rede em várias subredes, sendo instalado em cada uma um \textit{sniffer} que irá detectar as intrusões sucedidas nesse segmento de rede.
+    A segunda topologia, ilustrada na Figura ~\ref{img:topo2}, é uma solução mais escalavel, não tendo um número máximo de utilizadores que consegue servir. Portanto, esta solução tem como objectivo servir uma infraestrutura de rede com dimensões maiores do que a primeira topologia. Como se pode observar na Figura ~\ref{img:topo2}, esta solução divide a infraestrutura de rede em várias subredes, sendo instalado em cada uma um \textit{sniffer} que irá detectar as intrusões sucedidas nesse segmento de rede.
 
 \begin{figure}
 	\centering	
 	\includegraphics[scale=0.6]{images/topologia3.png}
-	\caption{Topologia de Rede 2}
+	\caption{Topologia de Rede Escalavel}
     \label{img:topo2}
 \end{figure}
 
 
 \subsection{Ambiente de Instalação do Sistema}
 
-
-Este produto é destinado a ser instalado nos servidores de cada uma das companhias de seguros compradoras. Devido a essa multiplicidade o ambiente tecnológico esperado deve manter-se universal, não contemplando nenhuma especificação particular a um determinado tipo de configuração empresarial.
-
-\subsection{Aplicações Associadas}
-Como o produto se destina a uma multiplicidade de empresas, não é possível saber com que software vai ser integrado. Contudo, para facilitar tal integração com outros \emph{softwares} da empresa, será criada uma API documentada no manual de funcionamento para promover a interacção entre este software e outros já existentes.
+    O \textit{Delusion} é um produto que será instalado consoante as necessidades de cada cliente, assim como já foi referido nas restrições de solução.
 
 \subsection{Software Off-the-Shelf}
 \begin{description}
     \item [Visual Paradigm for UML 7.1 Community Edition] usado para modelar o sistema de negócio e o sistema informático
     \item [Volere Template] usado como guia para elaborar o documento de requisitos
-
+    \item [Snort] Sistema de detecçã de intrusões
+    \item [Netflow] Colector de informações de trâfego
+    \item [IpTables] Ferramenta para configurar as tabelas da firewall do kernel
+    \item [Nmap] Scanner de segurança
+    \item [Ruby on Rails] Framework de desenvolvimento web da linguagem \textit{Ruby}
+    \item [Tshark] Visualizador da linha de comandos do trâfego capturado pelo \textit{Wireshark}
+    \item [Wireshark] Analisador de pacotes de rede
 \end{description}
 
 \subsection{Ambiente de Trabalho}
-Os Utilizadores(Registado e Anónimo) do produto irão aceder ao sistema de onde pretenderem, em qualquer dispositivo electrónico que suporte o acesso \emph{web} e a tecnologia Java.
 
-Os Mediadores executarão as suas funções laborais maioritariamente no seu local de trabalho (delegações, call-center), assim como os Colaboradores. No entanto, poderão também executá-las nos mesmos moldes que os Utilizadores anteriormente descritos.
+    O \textit{Delusion} terá como interface um ambiente \textit{web} que permita aos administradores de sistema configurar serviços e observar os vários eventos que sucederam na rede. O acesso a esta interface \textit{web} terá que ser estabelecido através de uma ligação segura, garantindo a confidencialidade, integridade e autenticidade dos dados que serão transmitidos.\\
 
-Como este simulador de seguros não recebe nem é afectado por qualquer \emph{input} do ambiente físico exterior, estes ambientes expectáveis não terão influência directa no desenho do sistema.
+    Devido as características únicas de configuração e visualização que o \textit{Delusion} proporciona, o acesso aos seus serviços será restrito à \textit{intranet}, não sendo permitidos acessos do exterior (\textit{internet}) por questões de protecção e segurança.
 
 \subsection{Restrições de Calendário}
 \begin{description}
@@ -77,4 +78,4 @@ Como este simulador de seguros não recebe nem é afectado por qualquer \emph{in
 \section{Nomenclatura e Definições}
 \subsection{Termos Usados no Projecto}
 
-Ver Anexo ~\ref{appendix:1}.
+    Ver Anexo ~\ref{appendix:1}.
