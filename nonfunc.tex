@@ -1,64 +1,120 @@
 \chapter{Requisitos Não-Funcionais}
 \minitoc
+
 \section{Requisitos de Aspecto e Percepção}
+
+% Início de requisito
+
 \subsection{Requisitos de Estilo}
 \begin{description}
-\item[Requisito] O produto deve ter uma aparência profissional.
-\item[Fit Criterion] Opinião favorável de todos os criadores do produto.
+\item[Requisito] O visualizador presente no produto deve ter uma aparência profissional.
+\item[Motivação] O utilizador irá assim obter uma experiência de utilização mais positiva e irá sentir maior confiança e robustez
+ao usar o produto.
+\item[Fit Criterion] Opinião favorável de todos os stakeholders.
 \end{description}
+
+
+% Fim de requisito
+
+
+
+% Início de requisito
 
 \section{Requisitos Humanos e Usabilidade}
 \subsection{Requisitos de Usabilidade}
 \begin{description}
-\item[Requisito] O produto não deve ser aborrecido ou maçador de usar.
-\item[Fit Criterion] Não abusar no uso de cores muito brilahntes, tamanho de letra sempre igual.
+\item[Requisito] O visualizador do produto deverá ser dinamico e não mostrar a informação sempre da mesma forma, sendo capaz de destacar informação mais importante de informação menos importante.
+\item[Motivação] Este requisito é importante para que o utilizador não se sinta aborrecido a usar o sistema, bem como, 
+para que a informação mais importante não lhe passe facilmente despercebida.  
+\item[Fit Criterion] Opinião favorável dos stakeholders.
 \end{description}
+
+
+% Fim de requisito
+
+
+% Início de requisito
+
 
 \section{Requisitos de Aprendizagem}
 \begin{description}
 \item[Requisito] Um administrador de redes familiarizado com Linux e ficheiros log deve conseguir utilizar o produto facilmente.
-\item[Fit Criterion] Um grupo de pessoas que já fizeram administração de redes devem conseguir ambientar-se ao front-end no espaço de uma hora.
+\item[Motivação] Isto é importante para que não haja grandes custos a treinar uma pessoa para usar o sistema, bem como, para que esta consiga usar 
+todas as potencialidades que o produto disponibiliza.
+\item[Fit Criterion] Um grupo de pessoas que já fizeram administração de redes, devem conseguir utilizar em pleno o sistema no espaço de uma hora.
 \end{description}
 
-\section{Requisitos de Performance}
-\subsection{Requisitos de Velocidade e Latência}
-\begin{itemize}
-\item A consulta da informação guardada não deverá demorar mais que 10 segundos.
-\item A aplicação de filtros até encontrar a informação que se pretende não deverá demorar mais que 10 minutos.
-\end{itemize}
 
-\subsection{Requisitos de Precisão}
-\begin{itemize}
-\item O relógio do sistema trabalhará em GMT.
-\end{itemize}
+% Fim de requisito
 
+
+
+% Início de requisito
 \subsection{Requisitos de Fiabilidade e Disponibilidade}
 \begin{itemize}
 \item O produto deverá funcionar sem falhas inesperadas em 99 de 100 utilizações.
 \end{itemize}
 
-\subsection{Requisitos de Longevidade}
-\begin{itemize}
-\item É esperado que o produto desempenhe a sua função correctamente de forma constante, até que a regulamentação da área de domínio que rege o seu funcionamento seja alterada.
-\end{itemize}
+% Fim de requisito
 
-\section{Requisitos Operacionais e Ambientais}
-\subsection{Ambiente Físico Esperado}
-\begin{itemize}
-\item É esperado que este produto seja instalado numa rede num ambiente de uma empresa, dentro de um espaço fechado com ar condicionado e sistemas contra falhas de energia.
-\end{itemize}
 
-\subsection{Requisitos de Interacção com Sistemas Adjacentes}
+
+% Início de requisito
+
 \begin{description}
-\item[Requisito] Este produto deverá ser utilizável nos quatro \emph{browsers} mais populares.
-\item[Fit Criterion] O produto deveria ser utilizado com sucesso em acessos via Internet Explorer, Firefox, Google Chrome e Safari actualmente.
-É expectável que estes continuem os quatro \emph{browsers} mais populares aquando da data de lançamento dos protótipos.
-\end{description} 
+\item[Requisito] O produto não pode deixar de registar :eventos maliciosos.
+\item[Motivação] Caso o produto não consiga registar todos os eventos maliciosos vai ser pouco fiável e pouco útil, pois, a principal utilidade
+do sistema é que este seja capaz de registar todos os eventos maliciosos.
+\item[Fit Criterion] Em 10000 eventos ocorridos, o sistema tem q ser registar pelo menos 9999. 
+\end{description}
 
+% Fim de requisito
+
+% Início de requisito
+
+\begin{description}
+\item[Requisito] O visualizador do sistema tem, sempre, que estar disponível para o utilizador.
+\item[Motivação] Caso o visualizador não esteja disponível o sistema perde praticamente toda a sua utilidade, já que, sem este fica muito mais 
+complicado ver a informação coletada.
+\item[Fit Criterion] Salvo falhas de energia, hardware, terceiros e catástrofes naturais o visualizador deve estar sempre disponível ao utilizador. 
+\end{description}
+
+% Fim de requisito
+
+
+% Início de requisito
+
+\begin{description}
+\item[Requisito] O visualizador tem que poder ser utilizado nos 4 browsers mais importantes.
+\item[Motivação] Se restringirmos os browsers capazes de suportar o visualizador, podemos também estar a restringir 
+o conjunto de utilizadores dispostos a usar o visualizador.
+\item[Fit Criterion] O visualizador tem que poder ser usado, indiferentemente, no Internet Explorer 8 e posteriores, no Mozilla Firefox 3 e 
+posteriores, no Google Chrome 10 e posteriores e finalmente Apple Safari 4 e posteriores.
+\end{description}
+
+% Fim de requisito
+
+
+% Início de requisito
 \section{Requisitos de Manutenção e Suporte}
 \subsection{Requisitos de Manutenção}
 \begin{description}
-\item[Requisito] O produto deve poder ser mantido por utilizadores e \emph{developers} que não os originais.
-\item[Fit Criterion] O produto deve ser auto-suficiente em termos de suporte para utilizadores e \emph{developers} alheios ao desenvolvimento do produto, com recurso apenas ao manual de utilização.
+\item[Requisito] O produto deve poder ser mantido por utilizadores e developers que não os originais.
+\item[Motivação] Caso o produto esteja dependente dos utilizadore e developers originais, irá estar condenado logo à partida. Os potenciais 
+compradores em princípio também saberão isso e não quererão ficar sempre dependentes de quem lhes vendeu o sistema
+\item[Fit Criterion] O produto deve ser auto-suficiente em termos de suporte para utilizadores e developers alheios ao desenvolvimento 
+do produto, com recurso apenas ao manual de utilização.
 \end{description}
 
+% Fim de requisito
+
+
+% Início de requisito
+\section{Requisitos de Cultura e Política}
+\begin{description}
+\item[Requisito] O sistema não deverá ter conteúdos que possam ofender culturas e/ou religiões 
+\item[Motivação] Caso isto não se cumpra os potenciais compradores poderão rejeitar o produto
+\item[Fit Criterion] Opinião positiva dos stakeholders.
+\end{description}
+
+% Fim de requisito
