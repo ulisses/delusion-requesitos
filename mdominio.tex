@@ -11,7 +11,7 @@ Com estes dois sistemas teremos então cumprido o objectivo principal deste proj
 O sistema de Sensor de rede usa uma Base de dados para registar o tráfego de rede e os alertas lançados pelo snort. Por outro lado o honeypot
 detecta os ataques e regista também na Base de dados estes ataques.
 
-\begin{figure}
+\begin{figure}[!ht]
 \centering	
 \includegraphics[scale=0.7]{images/ModelosDeDominio/Geral.png}
 \caption{Modelo de Domínio Geral}
@@ -27,7 +27,7 @@ armazena informação sobre essa actividade na base de dados.\\
 De lembrar que o guest possuí propositadamente vulnerabilidades com o intuito de atrair atacantes e assim registar as suas actividades.\\
 Este guest pode ter várias personalidades, isto é sistemas operativos reais a correr, entre elas: Linux, Solaris e Windows.
 
-\begin{figure}
+\begin{figure}[!ht]
 \centering	
 \includegraphics[scale=0.8]{images/ModelosDeDominio/HoneyPot.png}
 \caption{Modelo de Domínio HoneyPot}
@@ -39,7 +39,7 @@ construída no ambito deste produto - o Delusion collector daemon. Aqui irá ser
 afim de tirar conslusões sobre a acitivade da rede. Será ainda utilizada uma Base de dados para guardar os alertas do snort e o trágefo de rede, devidamente relacionado
 e ainda fazer polling dos alertas do snort.
 
-\begin{figure}
+\begin{figure}[!ht]
 \centering	
 \includegraphics[scale=0.8]{images/ModelosDeDominio/Rede.png}
 \caption{Modelo de Domínio Rede}
@@ -50,7 +50,7 @@ A Figura \ref{fig:mdvis} apresenta o modelo de domínio do visualizador onde se 
 informação (por exemplo pode ser: "mostra-me todos os alertas de ataques das últimas 24 horas"). Este Filtro irá usar a Base de dados para extraír a informação
 pretendida e posteriormente esa informação será mostrada em forma de gráfico ou tabela.
 
-\begin{figure}
+\begin{figure}[!ht]
 \centering	
 \includegraphics[scale=0.8]{images/ModelosDeDominio/Visualizador.png}
 \caption{Modelo de Domínio Visualizador}
