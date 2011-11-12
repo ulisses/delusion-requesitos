@@ -4,9 +4,6 @@
 Relativamente a este projecto existem algumas questões importantes que necessitam de um esclarecimento prévio por parte do cliente.
 A resposta a estas questões é essencial para o planeamento e para uma melhor especificação do sistema em si:
 
-\subsection{Multi-língua / Multi-moeda} 
-É necessário esclarecer se a possibilidade do sistema suportar várias línguas e várias moedas é uma configuração base e inicial do sistema, ou se existe a possibilidade de trabalhar simultaneamente com várias línguas/moedas para uma mesma empresa seguradora. Este esclarecimento é importante pois irá influenciar a especificação do sistema de informação de suporte à aplicação.
-
 \subsection{Especificação entidades sistema}
 Da análise prévia já efectuada, foram identificados intervenientes neste sistema:
 
@@ -18,56 +15,11 @@ Da análise prévia já efectuada, foram identificados intervenientes neste sist
 
 É necessário especificar se existe mais alguma entidade a ser considerada que tenha interacção no sistema a desenvolver e quais as suas competências. Relativamente à entidade mediador esclarecer a divisão feita: Mediador em Corretor, Agente, e Mediador de Seguros Ligado (actualização do antigo estatuto de Angariador no Decreto-Lei n 144/2006, de 31 de Julho).
 
-\subsection{Pacotes de seguros}
-Foram já considerados alguns pacotes pré-definidos, para o seguro automóvel e de saúde:
-
-\begin{itemize} 
-\item Auto (Auto Base/Mais/VIP) 
-\item Saúde (Care Base/VIP)
-\end{itemize} 
-
-O sistema permitirá a especificação de pacotes adicionais, com cláusulas a designar? É possível adicionar cláusulas a pacotes pré-definidos?
-Será necessário clarificar melhor estas questões.
-
-\subsection{Cálculo dos prémios seguros}
-De modo a uma melhor especificação do funcionamento do sistema é necessário ainda clarificar algumas questões relacionados com o cálculo dos prémios dos vários seguros, nomeadamente:
-
-\begin{itemize} 
-\item Noção existência de margens de desconto (mínima/máxima) por produto ou conjunto de produtos
-\item Esclarecer se existe a possibilidade de criação de novos descontos e quais os parâmetros necessários considerar para esses descontos (agregação produtos, coberturas adicionais, mediador envolvido, …)
-\item Noção de promoção com intervalo temporal definido
-\end{itemize} 
-
 \subsection{Sistema por empresa}
 Clarificar se a empresa de seguros necessita de implementar um sistema único para várias possíveis sucursais ou se a configuração é feita unitariamente sempre para cada empresa/sucursal.
 
-\section{Soluções actualmente disponíveis}
-
-Existem já no mercado vários produtos que possuem algumas características do sistema a desenvolver, nomeadamente a possibilidade de um cliente configurar um seguro e proceder à sua simulação para cálculo do respectivo prémio.
-
-São várias as seguradoras que disponibilizam aos seus clientes e potenciais clientes este tipo de funcionalidade. Contudo pela investigação feita não encontramos produtos para algumas funcionalidades particulares a desenvolver, nomeadamente:
-
-\begin{itemize} 
-\item Simulação multi-produto
-\item Sugestão de simulações
-\item Registo de simulações
-\item Pesquisa e consulta de simulações
-\end{itemize} 
-
-Assim, com todas as particularidades deste produto não encontramos qualquer solução que pudesse ser usada directamente para este projecto ou outro tipo de componente que pudesse ser incorporado/adaptado para melhoria e diminuição de tempo de desenvolvimento.
-
-Algumas ideias a nível de navegação e interface com o utilizador que encontramos no decurso da nossa investigação podem ser adaptadas e incorporadas ao longo do desenvolvimento deste projecto, de modo a manter alguma linearidade com aplicações actualmente existentes e sobre as quais o utilizador, especialmente o utilizador anónimo, pode já ter alguma familiaridade.
 
 \section{Novos Problemas}
-\subsection{Migração aplicações existentes}
-Este projecto configura-se como um produto base a ser instalado numa empresa seguradora, não estando à partida prevista qualquer substituição de produtos já existentes na mesma, sobre os quais teria de ser prevista uma migração.
-Contudo este cenário não é posto de parte, sendo que obviamente a migração de um qualquer produto existente terá impacto a nível de custo e tempo de implementação. Fundamentalmente cada caso tem que ser analisado individualmente, não se sabendo à partida quais os custos e acréscimo de tempo a considerar. Algumas tarefas a efectuar nesse processo de migração seriam por exemplo:
-
-\begin{itemize} 
-\item Identificação e levantamento aplicações existentes
-\item Identificação e levantamento possíveis fontes de informação
-\item Definição tarefas e calendário processo de migração
-\end{itemize} 
 
 \subsection{Incorporação aplicações}
 Para aplicações actualmente existentes e sobre os quais terá que haver uma partilha ou transferência de dados terá também que ser efectuada uma análise, nomeadamente:
@@ -78,23 +30,6 @@ Para aplicações actualmente existentes e sobre os quais terá que haver uma pa
 \item Definição de métodos e formatos de partilha de dados para cada aplicação
 \item Definição de tarefas e calendarização  
 \end{itemize} 
-
-\subsection{Efeitos em aplicações existentes}
- Relativamente aos efeitos em aplicações existentes, como já foi referido anteriormente, terá que ser analisado caso a caso, podendo até recair sobre migrações de sistemas actuais ou incorporação/cooperação com sistemas actualmente existentes.
-
-\subsection{Potenciais problemas com utilizadores}
-A introdução ou migração de novas aplicações dentro de uma organização pode suscitar alguma inércia por parte de alguns utilizadores que irão lidar com o novo sistema no seu dia-a-dia dentro da empresa. Esta reacção é natural, tendo em consideração que a mudança de métodos de trabalho, por vezes de longa data, implica uma adaptação que por vezes não é fácil.
-Sendo assim sugere-se algumas medidas a serem adoptadas que podem de alguma forma amenizar o impacto aos utilizadores dentro da organização:
-
-\begin{itemize} 
-\item Envolvência das pessoas no projecto. É fundamental que os utilizadores que irão, directa ou indirectamente lidar com a nova aplicação, se sintam como parte da implementação do produto na empresa, não sendo excluídas do processo.
-\item Acções de sensibilização, promovendo o diálogo dentro da organização. Estas acções servem não só para informação sobre o estado e evolução do projecto mas também para recolher impressões e opiniões de modo a que o processo de implementação possa ir sendo optimizado.
-\item Formação, é importante que as pessoas tenham formação e um tempo de adaptação, disponibilizado pela empresa, ao novo sistema. Esta formação e tempo de adaptação servirão para esbater a dificuldade inicial na utilização da aplicação.
-\end{itemize} 
-
-\subsection{Limitações do sistema}
-Na instalação do sistema não se prevêem à partida qualquer tipo de limitações de utilização, desde que cumpridos os requisitos mínimos de hardware e software na instalação do sistema, que terão que ser assegurados pela empresa.
-Requisitos adicionais ao sistema poderão ser incorporados posteriormente, contudo essa introdução terá que ser vista caso a caso e com mútuo acordo entre a empresa fornecedora do sistema e a empresa tomadora, sendo sujeita a documentação e análise adicionais, excluídas do actual documento.
 
 \subsection{Manutenção do sistema}
 O seguimento do sistema, depois da sua instalação é assegurado por um serviço de suporte ao produto, disponibilizado pela empresa fornecedora do sistema. Contudo, esse suporte não cobre situações externas que possam influenciar o funcionamento deste, tais como problemas com infra-estrutura e comunicações, que terão que ser asseguradas pela empresa tomadora do sistema. 
@@ -153,10 +88,6 @@ Para garantir a migração para o novo produto a empresa tomadora do produto ter
 
 É necessário também incluir a nova aplicação no sistema de backups da empresa, quer a nível aplicacional como de dados.
 Em caso de migração ou incorporação de aplicações existentes terá que haver uma análise caso a caso para análise dos requisitos necessários para efectivar essa mesma migração ou incorporação.
-
-\subsection{Dados a serem migrados}
-Como já foi referido neste documento não estão neste momento a ser consideradas migrações ou incorporação de funcionamento para aplicações actualmente existentes na empresa, considera-se uma instalação base.
-Requisitos a este nível têm que ser especificados pelo cliente atempadamente para que o planeamento da migração de dados possa ser feito.
  
 \section{Riscos}
 Todos os projectos envolvem riscos. O risco não é necessariamente uma coisa má, pelo que, sem riscos não existe avanço nos projectos. No entanto, existem diferenças entre os riscos, ou seja, entre os riscos incontrolados e os riscos passíveis de ser geridos. Os riscos só são maus se forem ignorados e começarem a dar problemas.
@@ -197,9 +128,10 @@ Tendo em conta a análise aos riscos envolvidos e considerando valores quantific
 \textbf{Probabilidade do risco}: Varia entre 0 e 1 (baixa, média e alta)
  
 \section{Custos}
-A duração global prevista para este projecto a ser efectuada por um recurso humano por dia é de seis meses e meio. O custo dia de um recurso humano é de 50 euros. Sendo assim, o custo estimado para este projecto, considerando 21 dias úteis, é 12.600 euros. Assim serão admitidos ao projecto o número essencial de recursos humanos de forma a garantir a sua exequibilidade no prazo estipulado. 
+A duração global prevista para este projecto a ser efectuada por um recurso humano por dia é de seis meses. O custo dia de um recurso humano é de 50 euros. Sendo assim, o custo estimado para este projecto, considerando 21 dias úteis, é 12.600 euros. Assim serão admitidos ao projecto o número essencial de recursos humanos de forma a garantir a sua exequibilidade no prazo estipulado. 
 Em relação à manutenção do sistema, será necessário contabilizar o custo de um administrador do sistema, pago de acordo com o valor de mercado.
 Por fim acresce ao custo o valor da formação dada aos utilizadores do sistema. Esse custo é medido em função do número de horas praticadas.
+Será ainda necessário comprar hardware no valor de 3.500 euros para suportar toda a estrutura do \textit{Delusion}.
 
 \section{Documentação e formação do Utilizador}
 \subsection{Documentação}
@@ -214,8 +146,4 @@ Neste projecto, fará parte a seguinte documentação:
 Esta documentação será elaborada por um subconjunto da equipa de desenvolvimento do projecto. A equipa será responsável também pela actualização da mesma. Toda a documentação será fornecida em formato digital (ficheiros pdf). 
 
 \subsection{Formação dos utilizadores}
-A formação dos utilizadores será da responsabilidade de alguns dos engenheiros de software da equipa de desenvolvimento. Estes terão como responsabilidade ministrar acções de formação com os utilizadores do produto, de forma a instruir os utilizadores das principais funcionalidades do produto. Essas acções serão iniciadas após a instalação do produto. 
-Estas acções de formação têm como finalidade envolver os utilizadores comuns do sistema no manuseamento do produto, de forma a torná-los autónomos da sua utilização. Os utilizadores no final destas acções de formação terão obrigatoriamente de saber simular seguros automóveis e de saúde consoante o seu perfil de utilizador. É uma tarefa importante visto que a sua formação é um requisito importante para o sucesso no uso do software.
-É importante revelar que o administrador do sistema terá de ter formação mais avançada, visto que será responsável por administrar todo o sistema. Tal formação será ministrada separadamente dos outros utilizadores sempre que necessário.
-Finalmente, será importante no final das acções de formação avaliar os resultados das mesmas, de forma a se poder acrescentar mais formação caso necessário.
-
+A formação dos utilizadores será numa primeira fase da responsabilidade de alguns dos engenheiros de software da equipa de desenvolvimento. Estes terão como responsabilidade ministrar acções de formação com os utilizadores do produto, de forma a instruir os utilizadores das principais funcionalidades do produto. Essas acções serão iniciadas após a instalação do produto. Estas acções de formação têm como finalidade envolver os utilizadores comuns do sistema no manuseamento do produto, de forma a torná-los autónomos da sua utilização.
