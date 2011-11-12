@@ -77,14 +77,8 @@ O \uticomum terá como interacção com o sistema as seguintes funcionalidades:
  \item \textbf{Ver Alertas} - os alertas que serão processados pelo \visualz, tanto poderão dizer respeito ao \emph{honeypot} como à rede.
  \item \textbf{Aplicar Filtros} - o utilizador poderá aplicar filtros às suas pesquisas, de modo a focalizar a informação ao que realmente lhe interessa.
  \item \textbf{Configurar Rede} - esta funcionalidade diz respeito às configurações que o utilizador poderá fazer à rede. Consoante a sua permissão, poderá por exemplo configurar um \emph{router} ou servidor.
- \item \textbf{Configurar Honeypot} - Finalmente, o utilizador poderá também configurar o \emph{honeypot}, alterando certos parâmetros, como por exemplo: tamanho de memória RAM, Sistema Operativo, etc.
+ \item \textbf{Configurar Honeypot} - Finalmente, o utilizador poderá também configurar o \emph{honeypot}. A sua explicação estará mais detalhada em~\ref{subsubsec: confighoney}.
 \end{itemize}
-\begin{comment}
-É possível incluir vários produtos numa mesma simulação. Para o efeito, o utilizador procederá como numa simulação normal, preenchendo os dados correspondentes ao primeiro produto a simular. Terminada esta simulação, é apresentada ao utilizador a opção "acrescentar novo produto (simulação multi-produto)" que, quando seleccionada, agrega a presente simulação à carteira de simulações e apresenta a possibilidade de realização de simulação de um novo produto. 
-
-Repetindo este processo, e quando satisfeito com o número de produtos simulados, o Utilizador solicita o cálculo do prémio conjunto, que tem em conta os descontos aplicáveis a uma simulação multi-produto.
-\end{comment}
-
 
 \begin{figure}[!htb]
 	\centering
@@ -93,25 +87,21 @@ Repetindo este processo, e quando satisfeito com o número de produtos simulados
 \end{figure}
 \pagebreak
 
+\subsubsection{\textbf{4 - Configuração HoneyPot}}~\label{subsubsec: confighoney}
 
+Uma das funcionalidades disponíveis na interação utilizador-\visualz, é a configuração do \emph{honeypot} (ver Figura~\ref{fig: confighoney}).
+Esta funcionalidade está divida em três acções que o utilizador poderá tomar, sendo essas acções:
 
-
-
-
-\subsubsection{\textbf{4 - Configuração HoneyPot}}
-
-Detalhando mais os tipos de configurações que um utilizador pode fazer. Tal como já foi dito, este pode indicar o SO que quer que a máquina corra, 
-pode também indicar os serviços activos e suas respectivas vulnerabilidades. Importante referir que na escolha do SO, o utilizador pode indicar os 
-parâmetros de hardware da máquina.
-
-\begin{comment}
-A cada utilizador registado com simulações guardadas será dada a possibilidade de pesquisar pelas mesmas. Tal significa filtrar as simulações guardadas por produto, valor do prémio, etc. O mediador poderá também pesquisar as simulações dos seus clientes. O sistema permite também a consulta das simulações pesquisadas.
-\end{comment}
+\begin{itemize}
+ \item \textbf{Indicar SO} - através desta funcionalidade, o utilizador poderá indicar qual o sistema operativo que pretende virtualizar, indicando também certos parâmetros de \emph{hardware} da máquina.
+ \item \textbf{Indicar serviços activos} - o utilizador poderá configurar, através do \visualz, quais os serviços activos que o \emph{honeypot} terá. Por exemplo, ter ou não activo um servidor \emph{apache}.
+ \item \textbf{Indicar vulnerabilidades} - finalmente, o utilizador poderá também configurar certas vulnerabilidades nos serviços activos do \emph{honeypot}.
+\end{itemize}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[scale=0.80]{images/ucs/ConfHoneyPot}
-	\caption {Diagrama de use case, configuração HoneyPot}
+	\caption {Diagrama de use case, configuração HoneyPot}~\label{fig: confighoney}
 \end{figure}
 \pagebreak
 
@@ -133,17 +123,18 @@ A cada utilizador registado com simulações guardadas será dada a possibilidad
 
 \subsubsection{\textbf{6 - Configuração Utilizadores}}
 
-Tal como já foi dito, o administrador e só o administrador pode criar e remover utilizadores, bem como, gerir o seu perfil. Dentro do perfil este
-pode configurar as permissões de cada utilizador, password de acesso entre outros.
+Como na maioria dos sistemas de \emph{software}, haverá um controlo/gestão de utilizadores por parte de um ou mais \emph{administradores}. Assim, cabe ao \admini fazer essa gestão a partir das seguintes funcionalidades, consoante se pode ver na Figura~\ref{fig: confutil}:
 
-\begin{comment}
-A cada utilizador registado com simulações guardadas será dada a possibilidade de pesquisar pelas mesmas. Tal significa filtrar as simulações guardadas por produto, valor do prémio, etc. O mediador poderá também pesquisar as simulações dos seus clientes. O sistema permite também a consulta das simulações pesquisadas.
-\end{comment}
+\begin{itemize}
+ \item \textbf{Criar Utilizador} - esta acção permite ao \admini criar um utilizador, indicando também certas propriedades que este irá ter, como por exemplo: se será o novo ultizador um \admini ou um \uticomum, se poderá ter permissões para configurar a rede/\emph{honeypot}, etc.
+ \item \textbf{Editar Utilizador} - a partir desta acção, o \admini poderá alterar certas propriedade de um utilizador que foram, ou não, definidas aquando a sua criação.
+ \item \textbf{Remover Utilizador} - finalmente, o \admini poderá eliminar utilizadores. A eliminação de um utilizador poderá implicar também a eliminação de outros registos.
+\end{itemize}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[scale=0.80]{images/ucs/ConfUtilizadores}
-	\caption {Diagrama de use case, configuração Utilizadores}
+	\caption {Diagrama de use case, configuração Utilizadores}~\label{fig: confutil}
 \end{figure}
 \pagebreak
 
