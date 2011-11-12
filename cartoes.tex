@@ -17,18 +17,17 @@ O Qemu deve poder identificar chamadas do sistema e seu contexto, de forma autom
 
 \item \textbf{Rationale}:
 
-Aqui descrição e justificação. \\
-\item \textbf{Originator}:
-
-Aqui o gajo que originou o requisito\\
+Uma vez que o utilizador malicioso irá usar a máquina virtual, para seu proveito, é imperativo que seja registado
+tudo o que ele faça no sistema. Umas das formas de registo será esta de identificar system calls e o contexto em que são chamadas,
+nomeadamente id do processo, id do utilizador, e argumentos das system calls.
 
 \item \textbf{Fit Criterion}:
 
-Aqui o critério de aceitação \\
+TODAS as system calls chamadas pelo guest OS, bem como, respectivos pid,uid e argumentos tem que ser registadas numa tabela. 
 
 \item \textbf{Priority}:
 
-Must Have. \\
+5 em 5
 
 \end{description}
 
@@ -57,23 +56,22 @@ Must Have. \\
 \begin{description}
 \item \textbf{Description}:
 
-O Qemu deve poder filmar as acções do utilizador malicioso, automaticamente. \\
+O Qemu deve poder filmar as acções do utilizador malicioso, disponibilizando de seguida, o ficheiro respectivo em formato vídeo \\
 
 
 \item \textbf{Rationale}:
 
-Aqui descrição e justificação. \\
-\item \textbf{Originator}:
+Como mais valia para o projecto, e como alternativa ao modo de visualização estático, o utilizador poderá ver de forma, mais "leve" o que
+se passa no guest OS, proporciando-se, assim, uma maior maior eficiência na análise do ocorrido.
 
-Aqui o gajo que originou o requisito\\
 
 \item \textbf{Fit Criterion}:
 
-Aqui o critério de aceitação \\
+Tem que ser possível ver um filme (sequência de capturas de ecrã) do guest OS, através de um ficheiro em formato vídeo, para cada sessão que um utilizador malicioso tenha iniciado.
 
 \item \textbf{Priority}:
 
-Must Have. \\
+2 em 5
 
 \end{description}
 
@@ -100,18 +98,17 @@ ou, para um sistema remoto.
 
 \item \textbf{Rationale}:
 
-Aqui descrição e justificação. \\
-\item \textbf{Originator}:
-
-Aqui o gajo que originou o requisito\\
+Por si só o registo de system calls é suficiente para registar os eventos iniciados pelo utilizador malicioso. Poderá no entanto haver casos
+em que este faz um download de um ficheiro malicioso (onde detectar system calls pouco nos ajuda para analisar o que está presente no ficheiro), ou 
+altera/cria ficheiros de texto. Nestes casos seria muito útil poder fazer uma cópia desses ficheiros para outro sistema para uma posterior análise.
 
 \item \textbf{Fit Criterion}:
 
-Aqui o critério de aceitação \\
+O Qemu ser capaz de transferir qualquer ficheiro para o Host ou mesmo para um sistema remoto.
 
 \item \textbf{Priority}:
 
-Must Have. \\
+4 em 5
 
 \end{description}
 
@@ -138,18 +135,17 @@ O daemon collector do Delusion (DCD), deve poder capturar qualquer tipo de trâf
 
 \item \textbf{Rationale}:
 
-Aqui descrição e justificação. \\
-\item \textbf{Originator}:
-
-Aqui o gajo que originou o requisito\\
+Até agora só foi falado de fazer registos de eventos após sessão iniciada pelo utilizador malicioso. No entanto, é muito importante
+que o sistema seja capaz de registar todos os eventos a partir de que o utilizador tente interagir com a máquina virtual. Coisa que não é por si 
+só possível com os requisitos anteriores.
 
 \item \textbf{Fit Criterion}:
 
-Aqui o critério de aceitação \\
+TODO o tráfego que passa pela máquina virtual tem que ser passível de ser registado, seja no sistema local ou num remoto.
 
 \item \textbf{Priority}:
 
-Must Have. \\
+5 em 5
 
 \end{description}
 
@@ -174,18 +170,17 @@ O utilizador consegue ver alertas, gerados pelo DCD, num browser.
 
 \item \textbf{Rationale}:
 
-Aqui descrição e justificação. \\
-\item \textbf{Originator}:
-
-Aqui o gajo que originou o requisito\\
+O requisito anterior apesar de capturar toda a informação é demasiado verbosa para o utilizador. Se o sistema conseguir detectar padrões no 
+trafego e avisar o utilizador desses padrões a detecção de eventos malignos será muito mais eficiente.
 
 \item \textbf{Fit Criterion}:
 
-Aqui o critério de aceitação \\
+Para um conjunto de tipo de ataques previamente definidos pelos utilizador. O sistema tem que ser capaz de conseguir detectar o padrão respectivo
+a cada um deles e gerar um alerta.
 
 \item \textbf{Priority}:
 
-Must Have. \\
+4 em 5
 
 \end{description}
 
@@ -209,19 +204,15 @@ Must Have. \\
 O utilizador consegue ver o trâfego que passou na máquina, capturado pelo DCD, num browser.
 
 \item \textbf{Rationale}:
-
-Aqui descrição e justificação. \\
-\item \textbf{Originator}:
-
-Aqui o gajo que originou o requisito\\
+Para efeitos de simplicidade é extremamente útil que toda a informação respectiva ao trâfego convirga, de modo que, o utilizador 
+não tenha que andar a analisar vários ficheiros distribuídos pelo sistema.
 
 \item \textbf{Fit Criterion}:
-
-Aqui o critério de aceitação \\
+Toda o trâfego coletado pelo sistema,tem que estar presente num ponto comum.
 
 \item \textbf{Priority}:
 
-Must Have. \\
+4 em 5
 
 \end{description}
 
@@ -243,22 +234,20 @@ Must Have. \\
 \begin{description}
 \item \textbf{Description}:
 
-O utilizador configurar os parâmetros de rede do HoneyPot, através, através dum browser.
+O utilizador configurar os parâmetros de rede do HoneyPot, através dum browser.
 
 \item \textbf{Rationale}:
 
-Aqui descrição e justificação. \\
-\item \textbf{Originator}:
-
-Aqui o gajo que originou o requisito\\
+Mais uma vez as ferramentas de configuração de redes, devem convergir numa só, de modo a que o utlizador não tenha que usar várias ferramentas
+ao mesmo tempo, promovendo assim mais uma vez a simplicidade
 
 \item \textbf{Fit Criterion}:
 
-Aqui o critério de aceitação \\
+As ferramentas necessárias para configuração de rede do HoneyPot, tem que estar disponíveis a partir do visualizador.
 
 \item \textbf{Priority}:
 
-Must Have. \\
+4 em 5
 
 \end{description}
 
