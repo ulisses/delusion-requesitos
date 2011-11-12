@@ -93,7 +93,7 @@ todas as potencialidades que o produto disponibiliza.
 \item[Motivação] Caso o produto não consiga registar todos os eventos maliciosos vai ser pouco fiável e pouco útil, pois, a principal utilidade
 do sistema é que este seja capaz de registar todos os eventos maliciosos.
 \item[Fit Criterion] Em 10000 eventos ocorridos, o sistema tem q ser registar pelo menos 9999. 
-\end{description
+\end{description}
 
 % Fim de requisito
 
@@ -104,13 +104,12 @@ do sistema é que este seja capaz de registar todos os eventos maliciosos.
 \item[Motivação] Caso o visualizador não esteja disponível o sistema perde praticamente toda a sua utilidade, já que, sem este fica muito mais 
 complicado ver a informação coletada.
 \item[Fit Criterion] Salvo falhas de energia, hardware, terceiros e catástrofes naturais o visualizador deve estar sempre disponível ao utilizador. 
-\end{description
+\end{description}
 
 % Fim de requisito
 
 
-
-
+% Acho que os dois seguintes nao interessam ate aos comments
 \subsection{Requisitos de Longevidade}
 \begin{itemize}
 \item É esperado que o produto desempenhe a sua função correctamente de forma constante, até que a regulamentação da área de domínio que rege o seu funcionamento seja alterada.
@@ -121,18 +120,27 @@ complicado ver a informação coletada.
 \begin{itemize}
 \item É esperado que este produto seja instalado numa rede num ambiente de uma empresa, dentro de um espaço fechado com ar condicionado e sistemas contra falhas de energia.
 \end{itemize}
+%%%%%%%%%%
 
-\subsection{Requisitos de Interacção com Sistemas Adjacentes}
+
+
+% Início de requisito
+
 \begin{description}
-\item[Requisito] Este produto deverá ser utilizável nos quatro \emph{browsers} mais populares.
-\item[Fit Criterion] O produto deveria ser utilizado com sucesso em acessos via Internet Explorer, Firefox, Google Chrome e Safari actualmente.
-É expectável que estes continuem os quatro \emph{browsers} mais populares aquando da data de lançamento dos protótipos.
-\end{description} 
+\item[Requisito] O visualizador tem que poder ser utilizado nos 4 browsers mais importantes.
+\item[Motivação] Se restringirmos os browsers capazes de suportar o visualizador, podemos também estar a restringir 
+o conjunto de utilizadores dispostos a usar o visualizador.
+\item[Fit Criterion] O visualizador tem que poder ser usado, indiferentemente, no Internet Explorer 8 e posteriores, no Mozilla Firefox 3 e 
+posteriores, no Google Chrome 10 e posteriores e finalmente Apple Safari 4 e posteriores.
+\end{description}
+
+% Fim de requisito
 
 \section{Requisitos de Manutenção e Suporte}
 \subsection{Requisitos de Manutenção}
 \begin{description}
 \item[Requisito] O produto deve poder ser mantido por utilizadores e \emph{developers} que não os originais.
-\item[Fit Criterion] O produto deve ser auto-suficiente em termos de suporte para utilizadores e \emph{developers} alheios ao desenvolvimento do produto, com recurso apenas ao manual de utilização.
+\item[Fit Criterion] O produto deve ser auto-suficiente em termos de suporte para utilizadores e \emph{developers} alheios ao desenvolvimento 
+do produto, com recurso apenas ao manual de utilização.
 \end{description}
 
