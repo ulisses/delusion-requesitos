@@ -67,7 +67,7 @@ conforme se pode ver na Figura~\ref{fig: casodeusovisual}:
 
 \begin{itemize}
  \item \textbf{Configurar utilizadores} - esta funcionalidade diz respeito à gestão de utilizadores e engloba acções do tipo adicionar/remover utilizadores, 
- alterar permissões (por exemplo: acesso a configurações, tipos de visualizações permitidas, etc).
+ alterar permissões (por exemplo: acesso a configurações, tipos de visualizações permitidas, etc). A sua explicação estará mais detalhada em~\ref{subsubsec: confighoney} - 6.
 \end{itemize}
 
 O \uticomum terá como interacção com o sistema as seguintes funcionalidades:
@@ -76,8 +76,8 @@ O \uticomum terá como interacção com o sistema as seguintes funcionalidades:
  \item \textbf{Ver Tráfego} - a funcionalidade que diz respeito a todas as formas de visualização que serão disponibilizadas pelo \visualz. Maioritariamente, a informação será exibida através de gráficos (de diversos tipos) e tabelas.
  \item \textbf{Ver Alertas} - os alertas que serão processados pelo \visualz, tanto poderão dizer respeito ao \emph{honeypot} como à rede.
  \item \textbf{Aplicar Filtros} - o utilizador poderá aplicar filtros às suas pesquisas, de modo a focalizar a informação ao que realmente lhe interessa.
- \item \textbf{Configurar Rede} - esta funcionalidade diz respeito às configurações que o utilizador poderá fazer à rede. Consoante a sua permissão, poderá por exemplo configurar um \emph{router} ou servidor.
- \item \textbf{Configurar Honeypot} - Finalmente, o utilizador poderá também configurar o \emph{honeypot}. A sua explicação estará mais detalhada em~\ref{subsubsec: confighoney}.
+ \item \textbf{Configurar Rede} - esta funcionalidade diz respeito às configurações que o utilizador poderá fazer à rede. A sua explicação estará mais detalhada em~\ref{subsubsec: confighoney} - 5.
+ \item \textbf{Configurar Honeypot} - Finalmente, o utilizador poderá também configurar o \emph{honeypot}. A sua explicação estará mais detalhada em~\ref{subsubsec: confighoney} - 4.
 \end{itemize}
 
 \begin{figure}[!htb]
@@ -107,17 +107,19 @@ Esta funcionalidade está divida em três acções que o utilizador poderá toma
 
 \subsubsection{\textbf{5 - Configuração Rede}}
 
-Mais uma vez, detalhando o que o utilizador pode configurar na rede. Este pode configurar a firewall (Iptables), tal como portas a bloquear, ou gamas
-de ip's a bloquear. Pode configurar o Snort e o TShark para o tipo de capturas de trâfego e gerações de alertas pretendidos.
+Como se pode ver na Figura~\ref{fig: confrede}, o utilizador poderá, caso tenha permissões para isso, configurar certas ferramentas que actuam sobre a rede. Desse modo, tem-se:
 
-\begin{comment}
-A cada utilizador registado com simulações guardadas será dada a possibilidade de pesquisar pelas mesmas. Tal significa filtrar as simulações guardadas por produto, valor do prémio, etc. O mediador poderá também pesquisar as simulações dos seus clientes. O sistema permite também a consulta das simulações pesquisadas.
-\end{comment}
+\begin{itemize}
+ \item \textbf{Configurar IpTables} - configurar \emph{iptables}, será ...
+ \item \textbf{Configurar Snort} - a configuração do \emph{Snort} passa por indicar parâmetros que irão influenciar na captura de pacotes ...
+ \item \textbf{Configurar Tshark} - a configuração do \emph{Tshark} permitirá fazer alterações que influenciam o comportamento do mesmo, à semelhança do \emph{Snort}.
+ \item \textbf{Configurar Rede} - esta funcionalidade diz respeito aos diversos parâmetros restantes que se podem modificar na rede. Tem-se como exemplo, a configuração de ...
+\end{itemize}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[scale=0.80]{images/ucs/ConfRede}
-	\caption {Diagrama de use case, configuração Rede}
+	\caption {Diagrama de use case, configuração Rede}~\label{fig: confrede}.
 \end{figure}
 \pagebreak
 
