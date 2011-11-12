@@ -1,6 +1,6 @@
 \pagebreak
 \section{Requisitos Funcionais}
-De seguida mostramos todos os requesitos funcionais do projecto. Apresentamos numa escala de 1 a 5 o nivel de prioridade, sendo 1 o mais baix e 5 o mais alto.
+De seguida apresentamos todos os requisitos funcionais do projecto. Apresentamos numa escala de 1 a 5 o nivel de prioridade, sendo 1 o mais baixo e 5 o mais alto.
 
 \begin{minipage}{0.55\textwidth}
 \begin{flushleft}\textbf{Requirement \#: 1}\end{flushleft}
@@ -268,22 +268,20 @@ As ferramentas necessárias para configuração de rede do HoneyPot, tem que est
 \begin{description}
 \item \textbf{Description}:
 
-O utlizador consegue filtrar a informação, presente no visualizador, através dum browser.
+O utlizador consegue filtrar a informação, referente a eventos, através dum browser.
 
 \item \textbf{Rationale}:
 
-Aqui descrição e justificação. \\
-\item \textbf{Originator}:
-
-Aqui o gajo que originou o requisito\\
+É importante que a informação consiga ser filtrada pelo utilizador, já que, este permite um maior foco na parte que o utilizador está
+interessado, aumentando assim a produtividade da análise pretendida.
 
 \item \textbf{Fit Criterion}:
 
-Aqui o critério de aceitação \\
+A informação tem que ser possível de ser filtrada pelo visualizador, através de critérios definidos pelo utilizador.
 
 \item \textbf{Priority}:
 
-Must Have. \\
+4 em 5
 
 \end{description}
 
@@ -309,18 +307,17 @@ O utlizador consegue, escolher o tipo de gráfico usado para representar o trâf
 
 \item \textbf{Rationale}:
 
-Aqui descrição e justificação. \\
-\item \textbf{Originator}:
+Um conjunto de gráficos à escolha permite ao utilizador escolher o gráfico que mais se adequa ao tipo de informação e ao tipo de análise feita,
+originando-se assim uma representação mais adequada à informação presente.
 
-Aqui o gajo que originou o requisito\\
 
 \item \textbf{Fit Criterion}:
 
-Aqui o critério de aceitação \\
+A informação tem que ser possível de ser representada a partir de um gráfico previamente escolhida pelo utilizador.
 
 \item \textbf{Priority}:
 
-Must Have. \\
+4 em 5
 
 \end{description}
 
@@ -342,22 +339,22 @@ Must Have. \\
 \begin{description}
 \item \textbf{Description}:
 
-O utlizador consegue, configurar uma ou mais instâncias do HoneyPot, através dum browser.
+O utilizador consegue, configurar uma ou mais instâncias do HoneyPot, através dum browser.
 
 \item \textbf{Rationale}:
 
-Aqui descrição e justificação. \\
-\item \textbf{Originator}:
-
-Aqui o gajo que originou o requisito\\
+No projecto, não é nosso interesse que o tipo de vulnerabilidade do sistema seja sempre o mesmo. É sim do nosso interesse que possamos criar
+máquinas com vulnerabilidades diferentes permitindo assim uma melhor selecção dos utilizadores maliciosos a usar a máquina. Também é do nosso interesse
+criar máquinas com características diferentes, por exemplo: arquitecturas, periféricos, memória RAM, etc..... Com isto cada máquina poderá ser adaptada
+a cada situação pretendida.
 
 \item \textbf{Fit Criterion}:
 
-Aqui o critério de aceitação \\
+Tem que ser possível configurar os vários parâmetros de instâncias do HoneyPot, através de um browser
 
 \item \textbf{Priority}:
 
-Must Have. \\
+4 em 5
 
 \end{description}
 
@@ -383,19 +380,17 @@ O administrador consegue criar e remover utilizadores, através dum browser.
 
 
 \item \textbf{Rationale}:
-
-Aqui descrição e justificação. \\
-\item \textbf{Originator}:
-
-Aqui o gajo que originou o requisito\\
+Não queremos que os utilizadores que podem aceder ao visualizador sejam fixos. Pode existir um futuro (muito provavelmente) onde irá ser preciso
+uma pessoa para monitorar o HoneyPot, ou então seja preciso remover uma pessoa dessa monitorização. Posto isto será muito importante poder adicionar
+ou remover utilizadores conforme necessário.
 
 \item \textbf{Fit Criterion}:
 
-Aqui o critério de aceitação \\
+O administrador poder criar ou remover utilizadores.
 
 \item \textbf{Priority}:
 
-Must Have. \\
+5 em 5
 
 \end{description}
 
@@ -417,23 +412,20 @@ Must Have. \\
 \begin{description}
 \item \textbf{Description}:
 
-O administrador gerir as prioridades de utilizadores, através dum browser.
+O administrador gerir as permissões de utilizadores, através dum browser.
 
 
 \item \textbf{Rationale}:
 
-Aqui descrição e justificação. \\
-\item \textbf{Originator}:
-
-Aqui o gajo que originou o requisito\\
+Como todos os utilizadores não são os mesmos, podemos querer dar acessos a algumas partes do HoneyPot a uns e negar o acesso a outros, para que isso aconteca é imperativo que haja um sistema de permissões que permita dar níveis de permissão a cada utilizador.
 
 \item \textbf{Fit Criterion}:
 
-Aqui o critério de aceitação \\
+O administrador tem que conseguir alterar as permissões de cada utilizador.
 
 \item \textbf{Priority}:
 
-Must Have. \\
+4 em 5
 
 \end{description}
 
