@@ -8,12 +8,10 @@ A resposta a estas questões é essencial para o planeamento e para uma melhor e
 Da análise prévia já efectuada, foram identificados intervenientes neste sistema:
 
 \begin{itemize} 
-\item Utilizador (anónimo/registado)
-\item Administrador (empresa de seguros)
-\item Mediador (Corretor/Agente/Mediador de seguros ligado)
+\item Normal
+\item Administrador
 \end{itemize}
 
-É necessário especificar se existe mais alguma entidade a ser considerada que tenha interacção no sistema a desenvolver e quais as suas competências. Relativamente à entidade mediador esclarecer a divisão feita: Mediador em Corretor, Agente, e Mediador de Seguros Ligado (actualização do antigo estatuto de Angariador no Decreto-Lei n 144/2006, de 31 de Julho).
 
 \subsection{Sistema por empresa}
 Clarificar se a empresa de seguros necessita de implementar um sistema único para várias possíveis sucursais ou se a configuração é feita unitariamente sempre para cada empresa/sucursal.
@@ -22,110 +20,12 @@ Clarificar se a empresa de seguros necessita de implementar um sistema único pa
 \section{Novos Problemas}
 
 \subsection{Incorporação aplicações}
-Para aplicações actualmente existentes e sobre os quais terá que haver uma partilha ou transferência de dados terá também que ser efectuada uma análise, nomeadamente:
 
-\begin{itemize} 
-\item Identificação e levantamento aplicações sobre as quais haverá partilha ou fluxo de dados
-\item Identificação dos dados a serem partilhados para cada aplicação
-\item Definição de métodos e formatos de partilha de dados para cada aplicação
-\item Definição de tarefas e calendarização  
-\end{itemize} 
+O ~\textit{Delusion} está a ser concebido de maneira a que seja possível através de um sistema de plugins incorporar nos gráficos apresentados pelo visualizador dados provenientes de ferramentas distintas.
 
 \subsection{Manutenção do sistema}
 O seguimento do sistema, depois da sua instalação é assegurado por um serviço de suporte ao produto, disponibilizado pela empresa fornecedora do sistema. Contudo, esse suporte não cobre situações externas que possam influenciar o funcionamento deste, tais como problemas com infra-estrutura e comunicações, que terão que ser asseguradas pela empresa tomadora do sistema. 
 
-\section{Tarefas}
-\subsection{Planeamento}
-Estão previstas as fases abaixo descritas, respectivas tarefas e resultados:
-\begin{sidewaystable}[!p]
-\begin{center}
-\setlength{\tabcolsep}{5pt}
-\begin{tabular}{|p{1cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{2.4cm}|p{2.4cm}|}
-\hline & \multicolumn{8}{|c|}{\T \B \textbf{Fases Iniciais}} & \multicolumn{1}{|c|}{\textbf{Formação}} & \multicolumn{1}{|c|}{\textbf{Suporte}}\\
-\cline{2-9} & \multicolumn{2}{|c|}{\T \B \textbf{Concepção}} & \multicolumn{2}{|c|}{\textbf{Elaboração}} & \multicolumn{2}{|c|}{\textbf{Construção}} & \multicolumn{2}{|c|}{\textbf{Transição}} & \multicolumn{1}{|c|}{\textbf{ }} & \multicolumn{1}{|c|}{\textbf{ }}\\
-\hline \multirow{6}{3cm}{\begin{sideways}\T \B \parbox{3cm}{Tarefas (Peso)}\end{sideways}} & MN & (+) & MN & (+) & MN & (o) & MN & (-) & & \\
-\cline{2-9} & AR & (+) & AR & (+) & AR & (o) & AR & (-) & & \\
-\cline{2-9} & ED & (*) & ED & (*) & ED & (+) & ED & (o) & Formação & Suporte \\
-\cline{2-9} & IMP & (o) & IMP & (*) & IMP & (+) & IMP & (o) & (+) & (+)\\
-\cline{2-9} & TST & (-) & TST & (o) & TST & (*) & TST & (+) & & \\
-\cline{2-9} & INST & (-) & INST & (-) & INST & (-) & INST & (+) & & \\
-\hline \multirow{5}{3cm}{\begin{sideways}\T \B \parbox{3cm}{Resultados}\end{sideways}} & \multicolumn{2}{|p{2cm}|}{Domínio do Sistema} & \multicolumn{2}{|p{2cm}|}{Descrição e Arquitectura do Sistema} & \multicolumn{2}{|p{2cm}|}{Protótipo do Sistema} & \multicolumn{2}{|p{2cm}|}{Migração, incorporação das aplicações existentes} & Formação dos Utilizadores & Suporte Aplicacional\\
-\cline{2-11}\T \B & \multicolumn{2}{|p{2cm}|}{Identificação dos Stakeholders} & \multicolumn{2}{|p{2cm}|}{Descrição do negócio e riscos do projecto} & \multicolumn{2}{|p{2cm}|}{Validação} & \multicolumn{2}{|p{2cm}|}{Instalação} &  & Tarefas de manutenção do sistema\\
-\cline{2-11}\T \B & \multicolumn{2}{|p{2cm}|}{Análise de Requisitos} & \multicolumn{2}{|p{2cm}|}{Plano de Desenvolvimento} & \multicolumn{2}{|p{2cm}|}{Testes} & \multicolumn{2}{|p{2cm}|}{Entrada em produção} & & Migrações\\
-\cline{2-11}\T \B & \multicolumn{2}{|p{2cm}|}{Estimativa inicial de custos} & \multicolumn{2}{|p{2cm}|}{Especificação do sistema} & \multicolumn{2}{|p{2cm}|}{ } & \multicolumn{2}{|p{2cm}|}{ } & & \\
-\cline{2-11}\T \B & \multicolumn{2}{|p{2cm}|}{Avaliação inicial de prioridades, riscos e processo de desenvolvimento} & \multicolumn{2}{|p{2cm}|}{Modelo da aplicação} & \multicolumn{2}{|p{2cm}|}{ } & \multicolumn{2}{|p{2cm}|}{ } & & \\
- \hline
-\end{tabular}
- \caption{Tabela de Planeamento}
-\end{center}
-\end{sidewaystable}
-\clearpage
-\subsection{Prazos}
-De seguida faz-se uma estimativa dos diferentes prazos para as fases acima expostas:
-
-\begin{table}[!h]
-\begin{center}
-\setlength{\tabcolsep}{2pt}
-\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{2.2cm}|p{2.2cm}|}
-\hline & \multicolumn{4}{|c|}{\T \B \textbf{Fases Iniciais}} & \multicolumn{1}{|c|}{\textbf{Formação}} & \multicolumn{1}{|c|}{\textbf{Suporte}}\\
-\cline{2-5} & \multicolumn{1}{|c|}{ \T \B \textbf{Concepção}} & \multicolumn{1}{|c|}{\textbf{Elaboração}} & \multicolumn{1}{|c|}{\textbf{Construção}} & \multicolumn{1}{|c|}{\textbf{Transição}} & \multicolumn{1}{|c|}{\textbf{ }} & \multicolumn{1}{|c|}{\textbf{ }}\\
-\hline \T \B Data Limite & Janeiro 2010 & Fevereiro 2010 & Abril 2010 & Maio 2010 & A especificar & A especificar\\
- \hline
-\end{tabular}
- \caption{Tabela de Prazos}
-\end{center}
-\end{table}
-
-\section{Migração para o novo produto}
-\subsection{Requisitos}
-Para garantir a migração para o novo produto a empresa tomadora do produto terá que garantir algumas condições necessárias, nomeadamente:
-
-\begin{itemize} 
-\item Infra-estrutura: local adequado onde irá ser albergado o(s) servidor(es) que serviram de suporte ao sistema, com condições adequadas ao seu funcionamento.
-\item Requisitos de hardware: fornecimento da máquina, ou máquinas onde serão instalados o servidor de base de dados e o servidor aplicacional.
-\item Requisitos de software: fornecimento do software base de suporte aplicacional, onde se inclui por exemplo o sistema operativo, componentes necessários para o funcionamento do sistema e base de dados.
-\end{itemize}
-
-É necessário também incluir a nova aplicação no sistema de backups da empresa, quer a nível aplicacional como de dados.
-Em caso de migração ou incorporação de aplicações existentes terá que haver uma análise caso a caso para análise dos requisitos necessários para efectivar essa mesma migração ou incorporação.
- 
-\section{Riscos}
-Todos os projectos envolvem riscos. O risco não é necessariamente uma coisa má, pelo que, sem riscos não existe avanço nos projectos. No entanto, existem diferenças entre os riscos, ou seja, entre os riscos incontrolados e os riscos passíveis de ser geridos. Os riscos só são maus se forem ignorados e começarem a dar problemas.
-A gestão de riscos implica a apreciação daqueles riscos que são mais prováveis de aplicar no projecto, decidindo o curso a tomar se esses riscos se tornarem problemas, e também na monitorização dos projectos de forma a detectar-se precocemente sinais sobre os riscos, de maneira a evitar que se tornem problemas.
-Abaixo passamos a citar a lista dos riscos mais prováveis e mais sérios de aparecer no projecto. Cada risco incluiu uma probabilidade de ele se tornar um problema.
-
-\begin{itemize}
-\item \textbf{Mudança dos requisitos} 
-Uma mudança nos requisitos acarreta um significativo risco no projecto, significando alterações na modelação dos requisitos iniciais. A probabilidade deste risco se tornar problema é alta, visto que não depende exclusivamente da equipa de desenvolvimento, e portanto, torna-se volátil a sua execução.
-
-\item \textbf{Pressão excessiva do cronograma} 
-O cronograma é um risco calculado que poderá se tornar problema quando se deixa de controlar o tempo. A probabilidade deste risco se tornar problema é relativamente baixa visto que todos os envolvidos no projecto estão cientes dos prazos a cumprir.
-
-\item \textbf{Requisitos problemáticos do utilizador}
-Por vezes os requisitos dos utilizadores tornam-se riscos para o projecto visto que muitos deles só são vistos como não exequíveis numa fase adiantada do projecto. A probabilidade de se tornar problema pode ser alta se os requisitos problemáticos não forem detectados inicialmente.
-
-\item \textbf{Qualidade baixa}
-O risco da qualidade do produto só será problema se o produto desenvolvido não corresponder ao expectável pelo cliente. No entanto, esse risco é controlável através dos diversos pontos de controlo do projecto ao longo do seu desenvolvimento. A probabilidade de se tornar um problema é baixa.
-\end{itemize}
-
-Tendo em conta a análise aos riscos envolvidos e considerando valores quantificáveis para as probabilidades desses riscos se tornarem problemas, apresenta-se abaixo uma estimativa para exposição ao risco.
-
-\begin{table}[!h]
-\begin{center}
-\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{4cm}|}
-\hline \multicolumn{1}{|c|}{\T \B \textbf{Riscos}} & \multicolumn{1}{|c|}{\textbf{Probabilidade}} & \textbf{Estimativa = Probabilidade $\times$ Impacto}\\
-\hline \T \B Mudança dos requisitos & Alta (valor 0,8) & $E(r) = 0,8 \times 8 = 6,4$\\
-\hline \T \B Pressão excessiva do cronograma & Baixa (valor 0,1) & $E(r) = 0,1 \times 3 = 0,3$\\
-\hline \T \B Requisitos problemáticos do utilizador & Alta (valor 0,8) & $E(r) = 0,8 \times 9 = 7,2$\\
-\hline \T \B Qualidade baixa & Baixa (valor 0,1) & $E(r) = 0,1 \times 9 = 0,9$\\
-\hline
-\end{tabular}
- \caption{Tabela de Riscos}
-\end{center}
-\end{table}
-\textbf{Impacto do risco}: Varia entre 1 e 10
-
-\textbf{Probabilidade do risco}: Varia entre 0 e 1 (baixa, média e alta)
  
 \section{Custos}
 A duração global prevista para este projecto a ser efectuada por um recurso humano por dia é de seis meses. O custo dia de um recurso humano é de 50 euros. Sendo assim, o custo estimado para este projecto, considerando 21 dias úteis, é 12.600 euros. Assim serão admitidos ao projecto o número essencial de recursos humanos de forma a garantir a sua exequibilidade no prazo estipulado. 
