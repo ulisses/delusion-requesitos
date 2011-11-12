@@ -2,17 +2,24 @@
 \minitoc
 \section{Restrições impostas}
 \subsection{Restrições de Solução}
+O produto de software que irá ser desenvolvido está restrito a duas topologias de instalação distintas, as quais dependem da infraestrutura de rede onde o produto será montado. A escalabilidade e a performance da rede são os principais factores que levaram à concepção destas duas soluções.\\
+
+A topologia apresentada na figura ~\ref{img:topo1} é uma solução mais simples, mais genérica, podendo ser considerada uma solução \textit{plug-and-play}, uma vez que não são necessárias configurações de rede onde o \textit{delusion} será montado. Esta é uma solução que tem como objectivo servir um número limitado de utilizadores, dado que a sua performance decai consideravelmente com o aumentar do trâfego de rede. \\
 
 \begin{figure}
 	\centering	
-	\includegraphics[scale=0.7]{images/topologia1.png}
+	\includegraphics[scale=0.6]{images/topologia1.png}
 	\caption{Topologia de Rede 1}
+    \label{img:topo1}
 \end{figure}
 
+A segunda topologia, ilustrada na figura ~\ref{img:topo2}, é uma solução mais escalavel, não tendo um número máximo de utilizadores que consegue servir. Portanto, esta solução tem como objectivo servir uma infraestrutura de rede com dimensões maiores do que a primeira topologia. Como se pode observar na figura ~\ref{img:topo2}, esta solução divide a infraestrutura de rede em várias subredes, sendo instalado em cada uma um \textit{sniffer} que irá detectar as intrusões sucedidas nesse segmento de rede.
+
 \begin{figure}
 	\centering	
-	\includegraphics[scale=0.7]{images/topologia3.png}
+	\includegraphics[scale=0.6]{images/topologia3.png}
 	\caption{Topologia de Rede 2}
+    \label{img:topo2}
 \end{figure}
 
 
