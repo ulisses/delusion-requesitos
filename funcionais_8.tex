@@ -55,19 +55,30 @@ A realização de seguro de saúde é semelhante à automóvel, sendo que os dad
 \end{figure}
 \pagebreak
 
-
-
-
+\newcommand{\uticomum}{\emph{utilizador comum}\xspace} 
+\newcommand{\admini}{\emph{administrador}\xspace} 
+\newcommand{\visualz}{\emph{visualizador}\xspace}
 \subsubsection{\textbf{3 - Visualizador}}
 
-Através do visualizador, um utilizador normal pode ver toda a informação gerada pelo sistema. Mais, pode ver essa informação filtrada, bem como,
-representada a seu gosto. Podendo para isso aplicar um critério à sua escolha para o filtro, ou, um gráfico à sua escolha para a representação.
-Além disso o utilizador pode ver no visualizador todos os alertas gerados pelo sistema. 
-Adicionalmente o utilizador pode configurar os parâmetros de rede e instâncias do HoneyPot (por exemplo: Vulnerabilidades, tamanho de memória RAM,
-Sistema operativo \ldots).
-O Administrador tem mais algumas opções disponíveis que o utilizador normal. Este pode criar ou remover utilizadores e pode gerir as permissões de
-cada utilizador (por exemplo: acesso a configurações de honeypot, tipos de alertas que pode ver \ldots).
+Como já foi referido anteriormente (sec x) existem dois tipos de utilizadores: o \uticomum; e o \admini.\\ 
 
+O \admini terá a mesma interacção com o \visualz que o \uticomum tem (que será explicado mais adiante), mais uma responsabilidade acrescida, 
+conforme se pode ver na Figura~\ref{fig: casodeusovisual}:
+
+\begin{itemize}
+ \item \textbf{Configurar utilizadores} - esta funcionalidade diz respeito à gestão de utilizadores e engloba acções do tipo adicionar/remover utilizadores, 
+ alterar permissões (por exemplo: acesso a configurações, tipos de visualizações permitidas, etc).
+\end{itemize}
+
+O \uticomum terá como interacção com o sistema as seguintes funcionalidades:
+
+\begin{itemize}
+ \item \textbf{Ver Tráfego} - a funcionalidade que diz respeito a todas as formas de visualização que serão disponibilizadas pelo \visualz. Maioritariamente, a informação será exibida através de gráficos (de diversos tipos) e tabelas.
+ \item \textbf{Ver Alertas} - os alertas que serão processados pelo \visualz, tanto poderão dizer respeito ao \emph{honeypot} como à rede.
+ \item \textbf{Aplicar Filtros} - o utilizador poderá aplicar filtros às suas pesquisas, de modo a focalizar a informação ao que realmente lhe interessa.
+ \item \textbf{Configurar Rede} - esta funcionalidade diz respeito às configurações que o utilizador poderá fazer à rede. Consoante a sua permissão, poderá por exemplo configurar um \emph{router} ou servidor.
+ \item \textbf{Configurar Honeypot} - Finalmente, o utilizador poderá também configurar o \emph{honeypot}, alterando certos parâmetros, como por exemplo: tamanho de memória RAM, Sistema Operativo, etc.
+\end{itemize}
 \begin{comment}
 É possível incluir vários produtos numa mesma simulação. Para o efeito, o utilizador procederá como numa simulação normal, preenchendo os dados correspondentes ao primeiro produto a simular. Terminada esta simulação, é apresentada ao utilizador a opção "acrescentar novo produto (simulação multi-produto)" que, quando seleccionada, agrega a presente simulação à carteira de simulações e apresenta a possibilidade de realização de simulação de um novo produto. 
 
