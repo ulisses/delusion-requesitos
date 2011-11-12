@@ -1,6 +1,7 @@
 \section{Modelos de Casos de Uso}
 \subsection{Modelo de Casos de Uso de alto nível}
 
+
 Diagrama geral de Use Cases
 
 \begin{comment}
@@ -17,14 +18,14 @@ Diagrama geral de Use Cases
 
 \subsubsection{\textbf{1 - HoneyPot}}
 
-Tal como apresentado no diagrama abaixo, o QEMU é capaz de identificar system calls do guest OS mais seu contexto. Após detectar uma chamada este
-actualiza a Base de dados com essa informação. O QEMU pode também copiar qualquer ficheiro do guest OS para o Host OS ou para outro ponto remoto.
-Mais ainda o QEMU é capaz de capturar uma sequência de capturas de ecrã do que se passa no guest, criando assim um ficheiro em formato vídeo para, 
-mais tarde o utilizador poder ver.
+\begin{itemize}
+ \item \textbf{Identificar system calls e actualizar BD} -  Tal como apresentado no diagrama abaixo, o QEMU é capaz de identificar system calls
+ do guest OS mais seu contexto. Após detectar uma chamada este actualiza a Base de dados com essa informação. 
+ \item \textbf{Copiar ficheiros} - O QEMU pode também copiar qualquer ficheiro do guest OS para o Host OS ou para outro ponto remoto.
+ \item \textbf{Filmar HoneyPot} - Mais ainda o QEMU é capaz de capturar uma sequência de capturas de ecrã do que se passa no guest, 
+ criando assim um ficheiro em formato vídeo para, mais tarde o utilizador poder ver.
+ \end{itemize}
 
-\begin{comment}
-Qualquer utilizador do produto poderá efectuar uma simulação de seguro automóvel. No entanto, cada utlizador terá acesso a pequenas funcionalidades diferentes dependendo do tipo de utiliador em que se insere (registado ou não, mediador, etc). Aqui apresentaremos o fluxo normal deste \emph{use case} para um utilizador básico, ou seja, sem qualquer tipo de privilégios. Mais à frente, na explicação dos \emph{use cases} que se seguem, abordaremos as funcionalidades extra que cada tipo de utilizador terá. 
-\end{comment}
 
 \begin{figure}[!htb]
 	\centering
@@ -34,18 +35,17 @@ Qualquer utilizador do produto poderá efectuar uma simulação de seguro autom�
 \pagebreak
 
 
-
-
 \subsubsection{\textbf{2 - Rede}}
 
-O Delusion Collector Daemon (DCD) tem como função capturar todo o tipo de trâfego que passe pela máquina. Para isso acontecer, o DCD usa o Snort e o
-Tshark (duas ferramentas de redes), para captura de trâfego e geração de alertas. Quando o DCD recolhe a informação referida, guarda-a numa 
-base de dados específica. Podemos assim ver o DCD como um coletor de toda a informação que tanto o Snort como o TShark geram, passando de seguida
-essa informação para uma bd.
 
-\begin{comment}
-A realização de seguro de saúde é semelhante à automóvel, sendo que os dados a serem fornecidos são diferentes. De momento, estamos a considerar relevantes apenas o sexo e data de nascimento das pessoas seguradas, assim como o grau de parentesco entre si. Temos portanto em conta que podem ser seguradas várias pessoas e que o tomador não é necessariamente uma delas.
-\end{comment}
+\begin{itemize}
+ \item \textbf{Captura trâfego} - O Snort e o TShark tem como função capturar todo o tipo de trâfego que passe pela rede. Toda essa informação
+ irá convergir para o Delusion Collector Daemon (DCD) que irá registar essa informação na base de dados.
+ \item \textbf{Filta trâfego} - O TShark pode adicionalmente filtrar o tráfego que coleta segundo critérios escolhidos pelo utilizador
+ \item \textbf{Analisa trâfego} - O Snort irá analisar o tráfego e procurar por padrões de eventos maliciosos, quando encontrar um padrão gera um
+ alerta, que será capturado pelo DCD.
+ \end{itemize}
+
 
 
 \begin{figure}[!htb]
