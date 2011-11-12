@@ -16,6 +16,8 @@
 \usepackage{psboxit}
 \usepackage[T1]{fontenc}
 \usepackage{fancyvrb}
+\usepackage[portuges]{minitoc}
+
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newcommand\T{\rule{0pt}{2.6ex}}
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}}
@@ -76,6 +78,16 @@
 
 \definecolor{darkblue}{rgb}{0,0.1,0.5}
 
+%% stuff do minitoc %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{minitocdepth}{2}
+\setlength{\mtcindent}{24pt}
+\renewcommand{\mtcfont}{\small\rm}
+\renewcommand{\mtcSSfont}{\small\bf}
+%\newenvironment{mtc}{\secttoc\sectlof\sectlot}{\pagebreak}
+%                        ^       ^        ^
+%                    conteudos  figuras  tabelas
+% \newenvironment{mtc}{\minitoc\minilof\minilot}{\pagebreak}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{hyphenat}
 %\hyphenpenalty=10000 %remover hifenização nas mudanças de linha
 \renewcommand\familydefault{\sfdefault} %usar font sem serifas
@@ -114,25 +126,41 @@ Eduardo Conceição & pg17211 &&
 \pagebreak
 \end{titlepage}
 %\maketitle
+% indices
+\dominitoc
+\dominilof
+\dominilot
+\renewcommand{\contentsname}{Índice}
 \tableofcontents
-\input{informacao}
+\addcontentsline{toc}{chapter}{\contentsname}
+\renewcommand{\listfigurename}{Índice de Figuras}
+\listoffigures
+\addcontentsline{toc}{section}{\listfigurename}
+\renewcommand{\listtablename}{Índice de Tabelas}
+\listoftables
+\addcontentsline{toc}{section}{\listtablename}
+
+
+\addtocounter{mtc}{+1}
+
+\input{informacao} %done
 \input{restricoes}
 %Requesitos funcionais
-\input{ambito}
-\input{mdominio}
+\input{ambito} %done
+\input{mdominio} %done
 \input{funcionais_8}
 \input{funcs}
-\input{nonfunc}
-\input{sec}
+\input{nonfunc} %done
+\input{sec} %done
 \input{project_issues}
 
 \appendix
 \chapter{Glossário}
 \input{glossario}
 
-\chapter{\emph{Use Cases}}
-\input{usecases}
-\chapter{Diagrama de Navegação}
-\section{Diagrama de Navegação}
-\input{diagnav}
+%\chapter{\emph{Use Cases}}
+%\input{usecases}
+%\chapter{Diagrama de Navegação}
+%\section{Diagrama de Navegação}
+%\input{diagnav}
 \end{document}
