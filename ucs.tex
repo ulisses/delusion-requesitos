@@ -1,18 +1,7 @@
 \newpage
 \section{Modelos de Casos de Uso}
-\subsection{Modelo de Casos de Uso de alto nível}
-Diagrama geral de Use Cases
 
-\begin{comment}
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[scale=0.85]{images/diagramaGeralDeUseCase}
-	\caption {Diagrama geral de \emph{Use Cases} do produto}
-\end{figure}
-\end{comment}
-
-\subsection{Modelos de Casos de Uso detalhado}
-\subsubsection{\textbf{1 - HoneyPot}}
+\subsection{\textbf{HoneyPot}}
 \begin{itemize}
  \item \textbf{Identificar system calls e actualizar BD} -  Tal como apresentado no diagrama abaixo, o QEMU é capaz de identificar system calls
  do guest OS mais seu contexto. Após detectar uma chamada este actualiza a Base de dados com essa informação. 
@@ -28,7 +17,7 @@ Diagrama geral de Use Cases
 \end{figure}
 \pagebreak
 
-\subsubsection{\textbf{2 - Rede}}
+\subsection{\textbf{Rede}}
 \begin{itemize}
  \item \textbf{Captura trâfego} - O Snort e o TShark tem como função capturar todo o tipo de trâfego que passe pela rede. Toda essa informação
  irá convergir para o Delusion Collector Daemon (DCD) que irá registar essa informação na base de dados.
@@ -47,7 +36,7 @@ Diagrama geral de Use Cases
 \newcommand{\uticomum}{\emph{utilizador comum}\xspace} 
 \newcommand{\admini}{\emph{administrador}\xspace} 
 \newcommand{\visualz}{\emph{visualizador}\xspace}
-\subsubsection{\textbf{3 - Visualizador}}
+\subsection{\textbf{Visualizador}}
 
 Como já foi referido anteriormente (sec~\ref{sec: olare}) existem dois tipos de utilizadores: o \uticomum; e o \admini.\\ 
 
@@ -76,7 +65,7 @@ O \uticomum terá como interacção com o sistema as seguintes funcionalidades:
 \end{figure}
 \pagebreak
 
-\subsubsection{\textbf{4 - Configuração HoneyPot}}~\label{subsubsec: confighoney}
+\subsection{\textbf{Configuração HoneyPot}}~\label{subsubsec: confighoney}
 
 Uma das funcionalidades disponíveis na interação utilizador-\visualz, é a configuração do \emph{honeypot} (ver Figura~\ref{fig: confighoney}).
 Esta funcionalidade está divida em três acções que o utilizador poderá tomar, sendo essas acções:
@@ -94,7 +83,7 @@ Esta funcionalidade está divida em três acções que o utilizador poderá toma
 \end{figure}
 \pagebreak
 
-\subsubsection{\textbf{5 - Configuração Rede}}
+\subsection{\textbf{Configuração Rede}}
 Como se pode ver na Figura~\ref{fig: confrede}, o utilizador poderá, caso tenha permissões para isso, configurar certas ferramentas que actuam sobre a rede. Desse modo, tem-se:
 
 \begin{itemize}
@@ -111,7 +100,7 @@ Como se pode ver na Figura~\ref{fig: confrede}, o utilizador poderá, caso tenha
 \end{figure}
 \pagebreak
 
-\subsubsection{\textbf{6 - Configuração Utilizadores}}
+\subsection{\textbf{Configuração Utilizadores}}
 Como na maioria dos sistemas de \emph{software}, haverá um controlo/gestão de utilizadores por parte de um ou mais \emph{administradores}. Assim, cabe ao \admini fazer essa gestão a partir das seguintes funcionalidades, consoante se pode ver na Figura~\ref{fig: confutil}:
 
 \begin{itemize}
